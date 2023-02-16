@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { signUp }  from '../../../utilities/users-services'
+import "./SignUpForm.css"
 
 export default class SignUpForm extends Component {
     // state is just a POJO
