@@ -16,6 +16,7 @@ async function index(req, res, next) {
 	}
 }
 
+
 // SHOW USER PARTICIPANTS 
 async function show(req, res, next) {
 	try {
