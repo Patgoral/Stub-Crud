@@ -16,26 +16,20 @@ async function index(req, res, next) {
 	}
 }
 
-// SHOW USER PARTICIPANTS - NOT WORKING
-async function show(req, res, next) {
-    console.log(req.user._id)
 
+// SHOW USER PARTICIPANTS 
+async function show(req, res, next) {
 	try {
-        const participant = req.body.participant
-		await Participant.findById(req.user.id)
-			.then((participants) => {
-                if (participants.owner.equals(req.user._id)) {
-				return participants.map((participant) => participant)
-                } else {
-                    return 
-                }
-			})
-			.then((participants) => {
-				res.status(200).json({ participants: participants })
-			})
-	} catch (error) {
-		res.status(400).json(error)
-	}
+        await Participant.find({owner: req.user._id})
+        .then((participants) => {
+            return participants.map((participant) => participant)
+        })
+        .then((participants) => {
+            res.status(202).json({ participants: participants })
+        })
+} catch (error) {
+    res.status(400).json(error)
+}
 }
 
 
