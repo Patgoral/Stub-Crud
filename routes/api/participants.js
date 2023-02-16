@@ -5,6 +5,9 @@ const participantsCtrl = require('../../controllers/api/participants')
 // GET /api/participants
 router.get('/', participantsCtrl.index)
 
+// SHOW /api/participants
+router.get('/:id', participantsCtrl.show)
+
 // POST /api/participants
 router.post('/', participantsCtrl.create)
 
@@ -15,6 +18,7 @@ router.patch('/:id', participantsCtrl.patch)
 
 // DELETE /api/participants/:id
 router.delete('/:id', participantsCtrl.remove)
+
 
 
 module.exports = router
