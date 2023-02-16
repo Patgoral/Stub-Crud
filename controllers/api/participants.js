@@ -16,7 +16,7 @@ async function index(req, res, next) {
 	}
 }
 
-// SHOW USER PARTICIPANTS
+// SHOW USER PARTICIPANTS - NOT WORKING
 async function show(req, res, next) {
     console.log(req.user._id)
 
@@ -61,8 +61,6 @@ async function patch(req, res, next) {
 		await Participant.findById(req.params.id)
 			.then((participant) => {
 				if (participant.owner.equals(req.user._id)) {
-					console.log(participant.owner)
-					console.log(req.user._id)
 					return participant.updateOne(req.body.participant)
 				} else {
 					return
@@ -78,21 +76,22 @@ async function patch(req, res, next) {
 
 // DELETE
 async function remove(req, res, next) {
+    console.log(req.user._id)
 	try {
-		await Participant.findById(req.params.id)
-			.then((participant) => {
-				if (participant.owner.equals(req.user._id)) {
-					return participant.deleteOne()
-				} else {
-					return
-				}
-			})
-			.then(() => {
-				res.status(204)
-			})
-	} catch (error) {
-		res.status(400).json(error)
-	}
+        await Participant.findById(req.params.id)
+        .then((participant) => {
+            if (participant.owner.equals(req.user._id)) {
+                return participant.deleteOne()
+            } else {
+                return
+            }
+        })
+        .then((participant) => {
+            res.status(204).json({ participant: participant })
+        })
+} catch (error) {
+    res.status(400).json(error)
+}
 }
 
 module.exports = {
