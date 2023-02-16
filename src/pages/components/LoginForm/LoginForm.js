@@ -27,26 +27,26 @@ export default function LoginForm({ setUser }) {
 
     return (
         <div className='form-container'>
-        <form autoComplete='off' onSubmit={handleSubmit}>
-            <label>Email</label>
-            <input 
-                type='email'
-                name='email'
-                value={credentials.email}
-                onChange={handleChange}
-                required
-            />
-            <label>Password</label>
-            <input 
-                type='password'
-                name='password'
-                value={credentials.password}
-                onChange={handleChange}
-                required
-            />
-            <button type='submit'>Log In</button>
-        </form>
-        <p className='error-message' >{error}</p>
-    </div>        
+            <form autoComplete='off' onSubmit={handleSubmit}>
+                <label>Email</label>
+                <input
+                    type='email'
+                    name='email'
+                    value={credentials.email}
+                    onChange={handleChange}
+                    required
+                />
+                <label>Password</label>
+                <input
+                    type='password'
+                    name='password'
+                    value={credentials.password}
+                    onChange={handleChange}
+                    required
+                />
+                <button type='submit'>Log In</button>
+            </form>
+            <p className='error-message' >{error}</p>
+        </div>
     )
 }
