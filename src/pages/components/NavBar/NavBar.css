@@ -1,0 +1,13 @@
+nav{
+    color: yellow;
+    display: flex;
+    justify-content: space-evenly;
+}
+.link{
+    color: lightblue;
+    font-size: 1.8rem;
+}
+.welcome{
+    font-size: 2.3rem;
+    font-style: italic;
+}
