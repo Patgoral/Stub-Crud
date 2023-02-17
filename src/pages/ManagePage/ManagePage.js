@@ -26,10 +26,12 @@ export default function ManagePage() {
       if (participant.owner === currentUser._id) {
         return (
           <div className='list-of-attendees' key={participant._id}>
-            <div>{participant.name}</div>
-            <div>{participant.location}</div>
-            <button onClick={() => handleDeleteParticipant(participant._id)}>
-              X
+            <div className="name-label">Name: {participant.name}</div>
+            <br></br>
+            <div className="location-label">Location: {participant.location}</div>
+            <br></br>
+            <button className="delete-button" onClick={() => handleDeleteParticipant(participant._id)}>
+              Delete Registration
             </button>
           </div>
         )
