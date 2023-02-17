@@ -1,3 +1,4 @@
+import "./ManagePage.css"
 import { getUser } from '../../utilities/users-services';
 import { useState, useEffect } from 'react';
 import * as participantsAPI from '../../utilities/participants-api';

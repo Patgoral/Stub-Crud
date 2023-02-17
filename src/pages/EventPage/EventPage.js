@@ -41,7 +41,7 @@ export default function EventPage() {
             <h2>Event Page</h2>
             <div className='event-page-container-top'>
                 <div className='logo'>
-                    <img src={logo}></img>
+                    <img className='logo-img' src={logo}></img>
                 </div>
                 <button onClick={handleCheckToken}>Manage Registration</button>
             </div>

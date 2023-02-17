@@ -20,7 +20,7 @@
 .register-form > input{
     text-align: center;
 }
-button{
+.register-button{
     display: grid;
     margin: auto;
     width: 30%;

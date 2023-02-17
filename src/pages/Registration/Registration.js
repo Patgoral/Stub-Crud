@@ -33,7 +33,7 @@ export default function Registration({ participant, setParticipant }) {
                     value={participant.location || ''}
                     onChange={handleInputChange}>
                 </input>
-                <button type='submit'>Register</button>
+                <button className='register-button' type='submit'>Register</button>
             </form>
         </div>
     )
