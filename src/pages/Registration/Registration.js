@@ -16,7 +16,6 @@ export default function Registration({ participant, setParticipant }) {
     function handleInputChange(event) {
         const addNewParticipant = { ...participant, [event.target.name]: event.target.value }
         setParticipant(addNewParticipant)
-        console.log(participant)
     }
 
     return (
