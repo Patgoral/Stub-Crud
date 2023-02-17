@@ -7,6 +7,15 @@
     background-color: red;
     color: white;
 }
+.edit-button{
+    color: whitesmoke;
+    background-color: darkgreen;
+}
+.edit-button:hover{
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
 .list-of-attendees{
     padding-bottom: 10px;
     margin-bottom: 3%;
