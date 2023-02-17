@@ -2,7 +2,7 @@ import { checkToken } from '../../utilities/users-services'
 import { useState, useEffect } from 'react'
 import * as participantsAPI from '../../utilities/participants-api'
 import './EventPage.css'
-import logo from './assets/stub_crud_logo.png'
+import logo from './assets/fried-clay.png'
 
 export default function EventPage() {
     const [participants, setParticipants] = useState([])
@@ -32,13 +32,19 @@ export default function EventPage() {
 
 
     return (
-        <div className='event-page'>
-            <h2>Event Page</h2>
-            <div className='event-page-container-top'>
-                <div className='logo'>
-                    <img src={logo}></img>
-                </div>
-                <button onClick={handleCheckToken}>Manage Registration</button>
+
+    <div className='event-page'>
+        <h2>Event Page</h2>
+        <div className='event-page-container-top'>
+            <div className='logo'>
+                <img className='logo-img' src={logo}></img>
+            </div>
+            <button onClick={handleCheckToken}>Manage Registration</button>
+        </div>
+        <div className='event-page-container-bottom'>
+            <div className='event-desc-container'>
+                <div className='event-desc-header'>Event Description</div>
+                <div className='event-desc-body'>This is a Very Awesome Event. Please Join Us for an Adventure!</div>
             </div>
             <div className='event-page-container-bottom'>
                 <div className='event-desc-container'>
