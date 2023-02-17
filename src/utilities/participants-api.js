@@ -1,4 +1,4 @@
-import sendRequest from './users-api'
+import {sendRequest, sendRequestToDelete} from './users-api'
 
 const BASE_URL = '/api/participants'
 
@@ -7,7 +7,7 @@ export function showParticipants() {
 }
 
 export function indexParticipants(data) {
-    return sendRequest(`${BASE_URL}` + '/user', 'POST', data)
+    return sendRequest(`${BASE_URL}` + '/user', 'POST')
 }
 
 export function addParticipant(data){
@@ -19,5 +19,5 @@ export function updateParticipant(participantId){
 }
 
 export function removeParticipant(participantId){
-    return sendRequest(`${BASE_URL}/${participantId}`, 'DELETE')
+    return sendRequestToDelete(`${BASE_URL}/${participantId}`, 'DELETE')
 }
