@@ -18,16 +18,7 @@ export function getToken() {
     // if it hasn't return the token
     const token = localStorage.getItem('token')
     if (!token) return null
-    // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJjIiwiZW1haWwiOiJjQGMuY29tIiwiX2lkIjoiNjNlYTVhNDdlOTMxNmQyMTE5ZWFkNDViIiwiY3JlYXRlZEF0IjoiMjAyMy0wMi0xM1QxNTo0MTo1OS41NzdaIiwidXBkYXRlZEF0IjoiMjAyMy0wMi0xM1QxNTo0MTo1OS41NzdaIiwiX192IjowfSwiaWF0IjoxNjc2MzAyOTE5LCJleHAiOjE2NzYzODkzMTl9.vJco5uJO1EEeRCMyH2GSKfWEwJo7lMWKJvKorKKzvwE
-    // ^^ that's our JWT
-    // Part 1 is the header
-    // part 2 is the payload
-    // Part 3 is the signature
     const payload = token.split('.')[1]
-    // JWTs are base64 encoded
-    // we need to decode it to make it usable
-    // JavaScript has a builtin function for decoding base64
-    // called atob()
     const decodedPayload = atob(payload)
     const parsedPayload = JSON.parse(decodedPayload)
     // JWT's exp is express in seconds, not milliseconds, so convert

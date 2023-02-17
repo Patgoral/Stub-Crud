@@ -1,28 +1,47 @@
-import { useState, useEffect } from 'react'
-import * as participantsAPI from '../../utilities/participants-api'
+import { getUser } from '../../utilities/users-services';
+import { useState, useEffect } from 'react';
+import * as participantsAPI from '../../utilities/participants-api';
 
 export default function ManagePage() {
-    const [participants, setParticipants] = useState([])
+  const [participants, setParticipants] = useState([]);
+  const currentUser = getUser()
+  let participantList;
 
-    useEffect(function(){
-    async function getAllParticipants(){
-        const participants = await participantsAPI.showParticipants()
-        setParticipants(participants)
+  useEffect(() => {
+    async function getAllParticipants() {
+      const participants = await participantsAPI.showParticipants()
+      setParticipants(participants)
     }
     getAllParticipants()
-    },[])
+  }, [])
 
-    const eachParticipant = participants.map((participant) => (
-		<div key={participant._id}> 
-        <div>{participant.name}</div>
-        <div>{participant.location}</div>
-        </div>
-	))
+  async function handleDeleteParticipant(id) {
+    await participantsAPI.removeParticipant(id)
+    setParticipants(participants.filter(p => p._id !== id))
+  }
 
-    return (
+  if (participants.length !== 0) {
+    participantList = participants.participants.map((participant) => {
+      if (participant.owner === currentUser._id) {
+        return (
+          <div className='list-of-attendees' key={participant._id}>
+            <div>{participant.name}</div>
+            <div>{participant.location}</div>
+            <button onClick={() => handleDeleteParticipant(participant._id)}>
+              <span role="img" aria-label="x">
+                ❌
+              </span>
+            </button>
+          </div>
+        )
+      }
+    })
+  }
+
+  return (
     <div>
-        <h2>Manage Registration</h2>
-        {eachParticipant}
+      <h2>Manage Registration</h2>
+      {participantList}
     </div>
-    )
+  )
 }
