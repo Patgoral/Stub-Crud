@@ -1,7 +1,7 @@
 import sendRequest from './users-api'
 const BASE_URL = '/api/participants'
 
-export function getAll() {
+export function showParticipants() {
     return sendRequest(BASE_URL)
 }
 

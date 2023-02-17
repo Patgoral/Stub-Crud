@@ -1,21 +1,29 @@
 *{
-    background-color: black;
-    color: white;
-    text-shadow: 
+     background-color: rgb(51, 51, 51);
+    /* color: white; 
+     text-shadow: 
 -1px -1px 0 #000, 
 1px -1px 0 #000, 
 -1px 1px 0 #000,
-1px 1px 0 #000;
+1px 1px 0 #000; */ 
 }
 .form-container{
     display: flex;
     padding: 1rem;
     justify-content: center;
 }
+.form-container > form > button{
+    width: 120px;
+}
 form{
     display: grid;
     grid-template-columns: 1fr 3fr;
+    width: 60%;
     gap: 1rem;
+}
+form > button{
+    display: grid;
+    grid-column: span 2;
 }
 label{
     background-color: lightslategray;
