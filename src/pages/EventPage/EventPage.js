@@ -32,6 +32,7 @@ export default function EventPage() {
 
 
     return (
+
         <div className='event-page'>
             <h2>Event Page</h2>
             <div className='event-page-container-top'>
@@ -42,7 +43,7 @@ export default function EventPage() {
             </div>
             <div className='event-page-container-bottom'>
                 <div className='event-desc-container'>
-                    <div className='event-desc-header'>Event Description</div>
+                    <div className='event-desc-header'>Event  Description</div>
                     <div className='event-desc-body'>This is a Very Awesome Event. Please Join Us for an Adventure!</div>
                 </div>
                 <div className='attendees-container'>
