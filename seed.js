@@ -91,6 +91,11 @@ const Participant = require('./models/participant')
                 name: "David Stearman",
                 location: "Washington D.C." 
             },
+            {
+                name: "Kinzer Hewitt",
+                location: "Washington D.C." 
+            },
+           
 
         ])
         // console.log(participants)
