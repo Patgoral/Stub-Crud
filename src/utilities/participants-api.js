@@ -16,3 +16,4 @@ export function updateParticipant(participantId){
 export function removeParticipant(participantId){
     return sendRequest(`${BASE_URL}/${participantId}`, 'DELETE')
 }
+ 

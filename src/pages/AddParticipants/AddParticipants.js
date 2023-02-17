@@ -37,4 +37,4 @@ export default function AddParticipants() {
             </form>
         </div>
     )
-}
+} 
