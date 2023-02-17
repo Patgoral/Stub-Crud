@@ -17,6 +17,9 @@ nav{
     font-size: 1.8rem;
     background-color: black;
 }
+.link:hover{
+    color:aliceblue;
+}
 .welcome{
     font-size: 2.3rem;
     font-style: italic;
