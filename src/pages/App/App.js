@@ -4,8 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import NavBar from '../components/NavBar/NavBar'
 import AuthPage from '../AuthPage/AuthPage'
 import AddParticipants from '../AddParticipants/AddParticipants'
-import EventPage from '../EventPage/EventPage'
-
+import EventPage from '../EventsPage/EventPage'
 import { getUser } from '../../utilities/users-services'
 
 function App() {
