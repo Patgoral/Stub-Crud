@@ -1,3 +1,19 @@
 .delete-button{
+    color: whitesmoke;
+    background-color: darkred;
+}
+.delete-button:hover{
     border-radius: 10px;
+    background-color: red;
+    color: white;
+}
+.list-of-attendees{
+    padding-bottom: 10px;
+    margin-bottom: 3%;
+}
+.name-label{
+    color: yellow;
+}
+.location-label{
+    color: lightblue;
 }
