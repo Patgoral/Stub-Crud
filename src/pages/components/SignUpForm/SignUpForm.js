@@ -60,7 +60,7 @@ export default class SignUpModal extends Component {
                 {this.state.isOpen && (
                     <div className="modal">
                         <div className="modal-content">
-                            <span className="close" onClick={this.closeModal}>&times;</span>
+                            <span className="close" onClick={this.closeModal}>❌</span>
                             <SignUpForm
                                 name={this.state.name}
                                 email={this.state.email}
