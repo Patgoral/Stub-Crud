@@ -1,40 +1,92 @@
-const mongoose = require('mongoose')
+require('dotenv').config()
+require('./config/database')
 const Participant = require('./models/participant')
 
-let resultData
-let saveCounter = 0
 
-const url = ['https://data.cityofnewyork.us/resource/pvvr-75zk.json']
+;(async function () {
+        const participants = await Participant.create ([
 
-mongoose.connect
-async function seed(req,res,next) {
-url.map(async url => {
-    try{
-        const res = await fetch(url)
-        const json = await res.json()
-        resultData= [...json]
-        for (let i = 0; i < resultData.length; i++) {
+            {
+                name: "Michael Rowe",
+                location: "Huntsville, AL" 
+            },
+            {
+                name: "Lucas Gomez",
+                location: "Brevard NC" 
+            },
+            {
+                name: "Chris Slaton",
+                location: "Tallahassee, FL" 
+            },
+            {
+                name: "Danielle Slaton",
+                location: "Tallahassee, FL" 
+            },
+            {
+                name: "Grace Ingham",
+                location: "Athens, GA" 
+            },
+            {
+                name: "Jill Lowther",
+                location: "Atlanta, GA" 
+            },
+            {
+                name: "Anthony Huinker",
+                location: "Atlanta, GA" 
+            },
+            {
+                name: "Leigh Finlayson",
+                location: "Atlanta, GA" 
+            },
+            {
+                name: "Kate Crockett",
+                location: "Augusta, GA" 
+            },
+            {
+                name: "Jack Crockett",
+                location: "Augusta, GA" 
+            },
+            {
+                name: "Greg Ekrem",
+                location: "Atlanta, GA" 
+            },
+            {
+                name: "Shane Byler",
+                location: "Atlanta, GA" 
+            },
+            {
+                name: "Bill Mondock",
+                location: "Warner Robbins, GA" 
+            },
+            {
+                name: "Ted Wood",
+                location: "Atlanta, GA" 
+            },
+            {
+                name: "Jeph Burgoon",
+                location: "Smyrna, GA" 
+            },
+            {
+                name: "Jacob Cronan",
+                location: "Atlanta, GA" 
+            },
+            {
+                name: "Chris Bulloch",
+                location: "Atlanta, GA" 
+            },
+            {
+                name: "Cedar Blanchard",
+                location: "Jasper, GA" 
+            },
+            {
+                name: "Olen Daelhousen",
+                location: "Brevard, NC" 
+            },
+            {
+                name: "Marcos Schechter",
+                location: "Atlanta, GA" 
+            }
 
-            let seedParticipant = new Participant({
-                name: resultData[i].name,
-                location: resultData[i].city + resultData[i.region],
-                // owner: req.user._id
-            })
-            seedParticipant.save(() => {
-                console.log("saved" + seedParticipant)
-                saveCounter++;
-  
-                if (saveCounter === resultData.length) {
-                   mongoose.disconnect()
-                   .then(() => console.log("saved succesfully and mongodb   disconnected"))
-                   .catch(error => console.log(error));
-                   }
-                });
-             }
-          } catch (error) {
-             console.log(error);
-          }
-          })
-        }
-
-        seed()
+        ])
+        console.log(participants)
+    })()

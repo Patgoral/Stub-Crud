@@ -6,7 +6,7 @@ export function showParticipants() {
     return sendRequest(BASE_URL)
 }
 
-export function indexParticipants() {
+export function indexParticipants(data) {
     return sendRequest(`${BASE_URL}` + '/user', 'POST', data)
 }
 
