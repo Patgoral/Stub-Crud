@@ -28,9 +28,9 @@ export default function ManagePage() {
           <div className='list-of-attendees' key={participant._id}>
             <div>{participant.name}</div>
             <div>{participant.location}</div>
-              <button className='delete-button' onClick={() => handleDeleteParticipant(participant._id)}>
-                DELETE ❌ 
-              </button>
+            <button onClick={() => handleDeleteParticipant(participant._id)}>
+              X
+            </button>
           </div>
         )
       }
