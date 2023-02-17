@@ -28,9 +28,7 @@ export default function ManagePage() {
             <div>{participant.name}</div>
             <div>{participant.location}</div>
             <button onClick={() => handleDeleteParticipant(participant._id)}>
-              <span role="img" aria-label="x">
-                ❌
-              </span>
+              X
             </button>
           </div>
         )
