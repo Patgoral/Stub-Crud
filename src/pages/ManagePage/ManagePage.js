@@ -1,3 +1,4 @@
+import "./ManagePage.css"
 import { getUser } from '../../utilities/users-services';
 import { useState, useEffect } from 'react';
 import * as participantsAPI from '../../utilities/participants-api';
@@ -27,11 +28,9 @@ export default function ManagePage() {
           <div className='list-of-attendees' key={participant._id}>
             <div>{participant.name}</div>
             <div>{participant.location}</div>
-            <button onClick={() => handleDeleteParticipant(participant._id)}>
-              <span role="img" aria-label="x">
-                ❌
-              </span>
-            </button>
+              <button className='delete-button' onClick={() => handleDeleteParticipant(participant._id)}>
+                DELETE ❌ 
+              </button>
           </div>
         )
       }

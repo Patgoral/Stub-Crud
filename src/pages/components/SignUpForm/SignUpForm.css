@@ -29,7 +29,7 @@ form > button{
 label{
     background-color: lightslategray;
     padding-top: 1vmin;
-    border-radius: 20%;
+    border-radius: 10px;
 }
 input{
     background-color: white;
@@ -41,7 +41,7 @@ input{
 }
 button{
     background-color: darkslategray;
-    border-radius: 25%;
+    border-radius: 10px;
     color: yellowgreen;
     padding: 16px 32px;
     text-align: center;
@@ -57,4 +57,7 @@ button:hover {
     background-color: yellowgreen;
     color: darkslategray;
     border-radius: 50%;
+}
+.close:hover {
+    cursor: pointer;
 }
