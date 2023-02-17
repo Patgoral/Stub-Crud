@@ -1,102 +1,37 @@
-// require('dotenv').config()
-// require('./config/database')
+// const fetch = require('node-fetch');
 // const Participant = require('./models/participant')
 
 
-// ;(async function seed() {
-//     await Participant.deleteMany({})
-//         const participants = await Participant.create([
+// // Set up the Eventbrite API request parameters
+// const token = "5ETLBN4MURLGLSMBADDN";
+// const eventId = "430916953207";
+// const url = `https://www.eventbriteapi.com/v3/events/${eventId}/attendees/`;
 
-//             {
-//                 name: "Michael Rowe",
-//                 location: "Huntsville, AL" 
-//             },
-//             {
-//                 name: "Lucas Gomez",
-//                 location: "Brevard NC" 
-//             },
-//             {
-//                 name: "Chris Slaton",
-//                 location: "Tallahassee, FL" 
-//             },
-//             {
-//                 name: "Danielle Slaton",
-//                 location: "Tallahassee, FL" 
-//             },
-//             {
-//                 name: "Grace Ingham",
-//                 location: "Athens, GA" 
-//             },
-//             {
-//                 name: "Jill Lowther",
-//                 location: "Atlanta, GA" 
-//             },
-//             {
-//                 name: "Anthony Huinker",
-//                 location: "Atlanta, GA" 
-//             },
-//             {
-//                 name: "Leigh Finlayson",
-//                 location: "Atlanta, GA"
-//             },
-//             {
-//                 name: "Kate Crockett",
-//                 location: "Augusta, GA" 
-//             },
-//             {
-//                 name: "Jack Crockett",
-//                 location: "Augusta, GA" 
-//             },
-//             {
-//                 name: "Greg Ekrem",
-//                 location: "Atlanta, GA" 
-//             },
-//             {
-//                 name: "Shane Byler",
-//                 location: "Atlanta, GA" 
-//             },
-//             {
-//                 name: "Bill Mondock",
-//                 location: "Warner Robbins, GA" 
-//             },
-//             {
-//                 name: "Ted Wood",
-//                 location: "Atlanta, GA" 
-//             },
-//             {
-//                 name: "Jeph Burgoon",
-//                 location: "Smyrna, GA" 
-//             },
-//             {
-//                 name: "Jacob Cronan",
-//                 location: "Atlanta, GA" 
-//             },
-//             {
-//                 name: "Chris Bulloch",
-//                 location: "Atlanta, GA" 
-//             },
-//             {
-//                 name: "Cedar Blanchard",
-//                 location: "Jasper, GA" 
-//             },
-//             {
-//                 name: "Olen Daelhousen",
-//                 location: "Brevard, NC" 
-//             },
-//             {
-//                 name: "Marcos Schechter",
-//                 location: "Atlanta, GA" 
-//             },
-//             {
-//                 name: "David Stearman",
-//                 location: "Washington D.C." 
-//             },
-//             {
-//                 name: "Kinzer Hewitt",
-//                 location: "Washington D.C." 
-//             },
-           
+// const headers = {
+//   "Authorization": `Bearer ${token}`
+// };
 
-//         ])
-//         console.log(participants)
-//     })()
+
+// async function seed() {
+//         await Participant.deleteMany({})
+
+//   try {
+  
+//     // Fetch the attendee data from the Eventbrite API
+//     const response = await fetch(url, { headers });
+//     const data = await response.json();
+
+//     const attendees = data.attendees;
+
+//     // Insert the attendee data into the MongoDB collection
+//     const result = await Participant.insertMany(
+//       attendees.map(attendee => ({ name: attendee.profile.name, location: `${attendee.profile.addresses.home.city}, ${attendee.profile.addresses.home.region}`  }))
+//     );
+//     console.log("seed documents inserted into the collection");
+
+//   } catch (err) {
+//     console.error(err);
+//   } 
+// }
+
+// seed().catch(console.error);
