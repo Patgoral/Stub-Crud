@@ -24,7 +24,7 @@ async function show(req, res, next) {
             return participants.map((participant) => participant)
         })
         .then((participants) => {
-            res.status(202).json({ participants: participants })
+            res.status(200).json({ participants: participants })
         })
 } catch (error) {
     res.status(400).json(error)
@@ -60,7 +60,7 @@ async function patch(req, res, next) {
 				}
 			})
 			.then((participant) => {
-				res.status(204).json({ participant: participant })
+				res.status(202).json({ participant: participant })
 			})
 	} catch (error) {
 		res.status(400).json(error)
