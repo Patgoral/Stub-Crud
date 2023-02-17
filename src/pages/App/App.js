@@ -7,8 +7,6 @@ import AuthPage from '../AuthPage/AuthPage'
 import Registration from '../Registration/Registration'
 import EventPage from '../EventPage/EventPage'
 
-import RegistrationHistoryPage from '../RegistrationHistoryPage/RegistrationHistoryPage'
-
 import { getUser } from '../../utilities/users-services'
 
 
