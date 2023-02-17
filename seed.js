@@ -3,8 +3,9 @@ require('./config/database')
 const Participant = require('./models/participant')
 
 
-;(async function () {
-        const participants = await Participant.create ([
+;(async function seed() {
+    await Participant.deleteMany({})
+        const participants = await Participant.create([
 
             {
                 name: "Michael Rowe",
@@ -36,7 +37,7 @@ const Participant = require('./models/participant')
             },
             {
                 name: "Leigh Finlayson",
-                location: "Atlanta, GA" 
+                location: "Atlanta, GA"
             },
             {
                 name: "Kate Crockett",
@@ -85,8 +86,17 @@ const Participant = require('./models/participant')
             {
                 name: "Marcos Schechter",
                 location: "Atlanta, GA" 
-            }
+            },
+            {
+                name: "David Stearman",
+                location: "Washington D.C." 
+            },
+            {
+                name: "Kinzer Hewitt",
+                location: "Washington D.C." 
+            },
+           
 
         ])
-        console.log(participants)
+        // console.log(participants)
     })()
