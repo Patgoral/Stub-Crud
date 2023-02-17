@@ -5,7 +5,9 @@ import NavBar from '../components/NavBar/NavBar'
 import AuthPage from '../AuthPage/AuthPage'
 import AddParticipants from '../AddParticipants/AddParticipants'
 import EventPage from '../EventsPage/EventPage'
+import RegistrationHistoryPage from '../RegistrationHistoryPage/RegistrationHistoryPage'
 import { getUser } from '../../utilities/users-services'
+
 
 function App() {
 	const [user, setUser] = useState(getUser())
@@ -17,8 +19,8 @@ function App() {
 					<NavBar user={user} setUser={setUser}/>
 					<Routes>
 						<Route path="/orders/new" element={<AddParticipants />} />
-						<Route path="/orders" element={<EventPage />} />
-                        <Route path="/" element=""/>
+						<Route path="/orders" element={<RegistrationHistoryPage />} />
+                        <Route path="/" element={<EventPage />} />
 					</Routes>
 				</>
 			) : (
