@@ -1,5 +1,5 @@
-const { findById } = require('../../models/event')
 const Participant = require('../../models/participant')
+
 
 // INDEX ALL PARTICIPANTS
 async function index(req, res, next) {
@@ -48,6 +48,9 @@ async function create(req, res, next) {
 	}
 }
 
+
+        
+
 // PATCH
 async function patch(req, res, next) {
 	try {
@@ -94,4 +97,5 @@ module.exports = {
 	create,
 	patch,
 	remove,
+
 }

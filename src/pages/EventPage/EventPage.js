@@ -2,7 +2,7 @@ import { checkToken } from '../../utilities/users-services'
 import { useState, useEffect } from 'react'
 import * as participantsAPI from '../../utilities/participants-api'
 import './EventPage.css'
-import logo from './assets/stub_crud_logo.png'
+import logo from './assets/fried-clay.png'
 
 export default function EventPage() {
     const [participants, setParticipants] = useState([])
@@ -32,6 +32,7 @@ export default function EventPage() {
 
 
     return (
+
 
         <div className='event-page'>
             <h2>Event Page</h2>
