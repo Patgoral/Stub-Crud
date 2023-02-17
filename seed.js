@@ -98,5 +98,5 @@ const Participant = require('./models/participant')
            
 
         ])
-        // console.log(participants)
+        console.log(participants)
     })()
