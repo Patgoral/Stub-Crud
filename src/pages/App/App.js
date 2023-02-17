@@ -26,7 +26,7 @@ function App() {
 
 						<Route path="/events/register" element={<Registration participant={participant} setParticipant={setParticipant} />} />
 						<Route path="/events" element={<EventPage />} />
-						<Route path="/events/manageregistration" element={<ManagePage/>}/>
+						<Route path="/manage" element={<ManagePage/>}/>
 						<Route path="/" element={<EventPage />} />
 					</Routes>
 				</>
