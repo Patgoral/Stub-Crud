@@ -34,6 +34,9 @@ h2{
     margin: 8px;
     font-size: 36px;
 }
+.logo-img{
+    width: 35rem;
+}
 .event-page-container-bottom{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -61,6 +64,7 @@ h2{
     font-size: 20px;
     padding: 0 10px;
     background-color: transparent;
+    text-shadow: none;
 }
 .attendees-container{
     margin: 8px;
