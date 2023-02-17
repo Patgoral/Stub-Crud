@@ -15,6 +15,9 @@ router.get('/user', participantsCtrl.show)
 // POST /api/participants
 router.post('/', participantsCtrl.create)
 
+// // POST SEED /api/participants/seed
+// router.post('/seed', participantsSeed.seed)
+
 
 // PATCH /api/participants/:id
 router.patch('/:id', participantsCtrl.patch)
