@@ -1,4 +1,5 @@
 import { checkToken } from '../../utilities/users-services'
+import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import * as participantsAPI from '../../utilities/participants-api'
 import './EventPage.css'
@@ -7,9 +8,11 @@ import logo from './assets/fried-clay.png'
 export default function EventPage() {
     const [participants, setParticipants] = useState([])
     let participantList;
+    const navigate = useNavigate()
 
     async function handleCheckToken() {
         checkToken()
+        navigate('/manage')
     }
 
     useEffect(function () {
