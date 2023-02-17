@@ -4,45 +4,52 @@ import { useState, useEffect } from 'react';
 import * as participantsAPI from '../../utilities/participants-api';
 
 export default function ManagePage() {
-  const [participants, setParticipants] = useState([]);
-  const currentUser = getUser()
-  let participantList;
+    const [participants, setParticipants] = useState([]);
+    const currentUser = getUser()
+    let participantList;
+    let userListOfAttendees = [];
 
-  useEffect(() => {
-    async function getAllParticipants() {
-      const participants = await participantsAPI.showParticipants()
-      setParticipants(participants)
+    useEffect(function () {
+        async function getAllParticipants() {
+            const participants = await participantsAPI.showParticipants()
+            setParticipants(participants)
+        }
+        getAllParticipants()
+    }, [])
+
+    async function handleDeleteParticipant(id) {
+        await participantsAPI.removeParticipant(id)
+        const updatedList = participants.participants.filter(p => p._id !== id)
+        console.log(updatedList)
     }
-    getAllParticipants()
-  }, [])
 
-  async function handleDeleteParticipant(id) {
-    await participantsAPI.removeParticipant(id)
-    setParticipants(participants.filter(p => p._id !== id))
-  }
+    if (participants.length !== 0) {
+        participants.participants.forEach(function (participant) {
+            if (participant.owner === currentUser._id) {
+                userListOfAttendees.push(participant)
+            }
+        })
+    }
 
-  if (participants.length !== 0) {
-    participantList = participants.participants.map((participant) => {
-      if (participant.owner === currentUser._id) {
-        return (
-          <div className='list-of-attendees' key={participant._id}>
-            <div className="name-label">Name: {participant.name}</div>
-            <br></br>
-            <div className="location-label">Location: {participant.location}</div>
-            <br></br>
-            <button className="delete-button" onClick={() => handleDeleteParticipant(participant._id)}>
-              Delete Registration
-            </button>
-          </div>
-        )
-      }
-    })
-  }
+    participantList = userListOfAttendees.map((participant) => (
+        <div className='list-of-attendees' key={participant._id}>
+            <div className='name-label'>
+                {participant.name}
+                <input placeholder={participant.name}></input>
+            </div>
+            <div className='location-label'>
+                {participant.location}
+                <input placeholder={participant.location}></input>
+            </div>
+            <button className='delete-button'>Edit</button>
+            <button onClick={() => handleDeleteParticipant(participant._id)}>Delete</button>
+        </div>
+    ))
 
-  return (
-    <div>
-      <h2>Manage Registration</h2>
-      {participantList}
-    </div>
-  )
+    return (
+        <div>
+            <h2>Manage Registration</h2>
+            <div>{participantList}</div>
+        </div>
+    )
 }
