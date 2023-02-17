@@ -11,9 +11,9 @@ export default function NavBar({ user, setUser }) {
   }
     return(
         <nav>
-        <Link className='link' to="/orders">Registration History</Link>
+        <Link className='link' to="/events">Event Page</Link>
         &nbsp; | &nbsp;
-        <Link className='link' to="/orders/new">Register</Link>
+        <Link className='link' to="/events/register">Register</Link>
         &nbsp; | &nbsp;
         <span className='welcome'>Welcome, {user.name}!</span>
         &nbsp; | &nbsp;

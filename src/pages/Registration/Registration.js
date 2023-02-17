@@ -1,17 +1,16 @@
-import {useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import * as participantsAPI from '../../utilities/participants-api'
+import './Registration.css'
 
-export default function AddParticipants() {
-    const [participant, setParticipant] = useState({
-        name: '',
-        location: ''
-    })
+export default function Registration({participant, setParticipant}) {
+    const navigate = useNavigate();
     //ADD A PARTICIPANT
     async function handleAddParticipant(event){
         event.preventDefault()
         const participantData = { participant:participant }
         const participantToAdd = await participantsAPI.addParticipant(participantData)
         setParticipant(participantToAdd)
+        navigate("/events")
     }
     //handles the change in the form to ADD
     function handleInputChange(event){
@@ -19,9 +18,10 @@ export default function AddParticipants() {
         setParticipant(addNewParticipant)
         console.log(participant)
     }
+
     return(
-        <div>
-            <h2 className="register-header">Register for event below</h2>
+        <div className="register-form-container">
+            <div className="register-header">Register for the Event</div>
             <form className="register-form" onSubmit={handleAddParticipant}>
                 <input placeholder='Name' 
                 name ='name'
@@ -38,3 +38,5 @@ export default function AddParticipants() {
         </div>
     )
 }
+{/* <Link className='link' to="/events">
+                <button type='submit'>Register</button></Link> */}
