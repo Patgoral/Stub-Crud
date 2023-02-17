@@ -3,10 +3,14 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import NavBar from '../components/NavBar/NavBar'
 import AuthPage from '../AuthPage/AuthPage'
+
 import Registration from '../Registration/Registration'
 import EventPage from '../EventPage/EventPage'
 
+import RegistrationHistoryPage from '../RegistrationHistoryPage/RegistrationHistoryPage'
+
 import { getUser } from '../../utilities/users-services'
+
 
 function App() {
 	const [user, setUser] = useState(getUser())
@@ -21,9 +25,11 @@ function App() {
 				<>
 					<NavBar user={user} setUser={setUser}/>
 					<Routes>
+
 						<Route path="/events/register" element={<Registration participant={participant} setParticipant={setParticipant}/>} />
 						<Route path="/events" element={<EventPage />} />
-                        <Route path="/" element={<EventPage />} />
+
+            <Route path="/" element={<EventPage />} />
 					</Routes>
 				</>
 			) : (
