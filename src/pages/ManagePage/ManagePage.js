@@ -41,8 +41,8 @@ export default function ManagePage() {
                 {participant.location}
                 <input placeholder={participant.location}></input>
             </div>
-            <button className='delete-button'>Edit</button>
-            <button onClick={() => handleDeleteParticipant(participant._id)}>Delete</button>
+            <button className='edit-button'>Edit</button>
+            <button className='delete-button' onClick={() => handleDeleteParticipant(participant._id)}>Delete</button>
         </div>
     ))
 
