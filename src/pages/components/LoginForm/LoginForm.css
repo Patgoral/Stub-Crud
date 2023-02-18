@@ -1,0 +1,29 @@
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+form{
+    display: grid;
+    max-width: 500px;
+}
+form > button{
+    background-color: darkslategray;
+    border-radius: 10px;
+    color: yellowgreen;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+label{
+    align-content: center;
+    text-align: left;
+    font-size: 24px;
+    background-color: transparent;
+}

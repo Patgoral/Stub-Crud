@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { logIn } from '../../../utilities/users-services'
+import "./LoginForm.css"
 
-export default function LoginForm({ setUser }) {
+export default function LoginForm({ setUser, signUpModal }) {
     const [credentials, setCredentials] = useState({
         email: '',
         password: '',
@@ -24,9 +25,9 @@ export default function LoginForm({ setUser }) {
             setError('Error Logging In')
         }
     }
-
+    
     return (
-        <div className='form-container'>
+        <div className='form-container' style={{display: `${signUpModal}`}}>
             <form autoComplete='off' onSubmit={handleSubmit}>
                 <label>Email</label>
                 <input
@@ -44,7 +45,7 @@ export default function LoginForm({ setUser }) {
                     onChange={handleChange}
                     required
                 />
-                <button type='submit'>Log In</button>
+                <button type='submit'>Sign In</button>
             </form>
             <p className='error-message' >{error}</p>
         </div>
