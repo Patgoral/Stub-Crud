@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import * as participantsAPI from '../../utilities/participants-api'
 import './EventPage.css'
-import logo from './assets/fried-clay.png'
+import logo from '../assets/fried-clay.png'
 
 export default function EventPage() {
     const [participants, setParticipants] = useState([])

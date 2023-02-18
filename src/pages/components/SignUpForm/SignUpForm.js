@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { signUp }  from '../../../utilities/users-services'
+import { signUp } from '../../../utilities/users-services'
 import "./SignUpForm.css"
 
 export default class SignUpModal extends Component {
@@ -14,6 +14,7 @@ export default class SignUpModal extends Component {
 
     openModal = () => {
         this.setState({ isOpen: true });
+        this.props.setSignUpModal('none')
     }
 
     closeModal = () => {
@@ -25,6 +26,7 @@ export default class SignUpModal extends Component {
             error: '',
             isOpen: false
         });
+        this.props.setSignUpModal('')
     }
 
     handleChange = (event) => {
@@ -52,29 +54,39 @@ export default class SignUpModal extends Component {
     }
 
     render() {
+        let signUpForm = this.state.isOpen;
+
         const disable = this.state.password !== this.state.confirm;
 
+        function signInMessages(openSignUp, closeSignUp) {
+            if (!signUpForm) {
+                return openSignUp
+            }
+            else {
+                return closeSignUp
+            }
+        }
+        // console.log(this.props.signUpModal)
         return (
-            <>
-                <button onClick={this.openModal}>Sign Up</button>
+            <div className="sign-up-container">
+                <span>{signInMessages('New Here? Sign up to Register!', 'Already have an Account?')}</span>&nbsp;
+                <button className="openModal"
+                    onClick={signInMessages(this.openModal, this.closeModal)}>{signInMessages('Sign Up', 'Sign In')}</button>
                 {this.state.isOpen && (
                     <div className="modal">
-                        <div className="modal-content">
-                            <span className="close" onClick={this.closeModal}>❌</span>
-                            <SignUpForm
-                                name={this.state.name}
-                                email={this.state.email}
-                                password={this.state.password}
-                                confirm={this.state.confirm}
-                                error={this.state.error}
-                                handleChange={this.handleChange}
-                                handleSubmit={this.handleSubmit}
-                                disable={disable}
-                            />
-                        </div>
+                        <SignUpForm
+                            name={this.state.name}
+                            email={this.state.email}
+                            password={this.state.password}
+                            confirm={this.state.confirm}
+                            error={this.state.error}
+                            handleChange={this.handleChange}
+                            handleSubmit={this.handleSubmit}
+                            disable={disable}
+                        />
                     </div>
                 )}
-            </>
+            </div>
         )
     }
 }
@@ -115,7 +127,7 @@ function SignUpForm(props) {
                     onChange={props.handleChange}
                     required
                 />
-                <button type='submit' disabled={props.disable}>Sign Up</button>
+                <button className="sign-up-button" type='submit' disabled={props.disable}>Sign Up</button>
             </form>
             <p className='error-message'>{props.error}</p>
         </div>

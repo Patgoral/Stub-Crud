@@ -1,33 +1,32 @@
 *{
     font-family: sans-serif;
-     background-color: rgb(51, 51, 51);
+     background-color: rgb(50, 50, 50);
      color: white; 
-     text-shadow: 
+     /* text-shadow: 
 -1px -1px 0 #000, 
 1px -1px 0 #000, 
 -1px 1px 0 #000,
-1px 1px 0 #000;  
+1px 1px 0 #000;   */
 }
 .form-container{
     display: flex;
     padding: 1rem;
     justify-content: center;
 }
-.form-container > form > button{
-    width: 120px;
-}
+
 form{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    width: 60%;
+    width: 70%;
     gap: 1rem;
 }
 form > button{
     display: grid;
     grid-column: span 2;
+    border: none;
 }
 label{
-    background-color: lightslategray;
+    background-color: transparent;
     padding-top: 1vmin;
     border-radius: 10px;
 }
@@ -39,25 +38,37 @@ input{
     text-shadow: none;
     font-size: larger;
 }
-button{
+.sign-up-button{
     background-color: darkslategray;
     border-radius: 10px;
     color: yellowgreen;
-    padding: 16px 32px;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 24px;
+    margin: auto;
     transition-duration: 0.4s;
+    border: none;
     cursor: pointer;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-button:hover {
+.sign-up-button:hover {
     background-color: yellowgreen;
     color: darkslategray;
-    border-radius: 50%;
 }
 .close:hover {
+    cursor: pointer;
+}
+span{
+    font-size: 20px;
+}
+.openModal, .closeModal{
+    background-color: transparent;
+    padding: 2px;
+    border-radius: 0;
+    font-size: 20px;
+    color: yellowgreen;
+    border: none;
     cursor: pointer;
 }
