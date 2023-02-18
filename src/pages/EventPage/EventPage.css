@@ -45,7 +45,8 @@ h2{
     display: grid;
     align-content: start;
     margin: 8px;
-    height: 450px;
+    padding: 15px;
+    height: 600px;
     background-color: rgb(152, 152, 152);
     border-radius: 16px;
     overflow: auto;
@@ -71,7 +72,8 @@ h2{
     margin: 8px;
     background-color: rgb(152, 152, 152);
     border-radius: 16px;
-    max-height: 450px;
+    max-height: 600px;
+    padding: 15px;
     overflow: auto;
 }
 .list-of-attendees{
