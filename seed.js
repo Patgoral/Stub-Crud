@@ -1,9 +1,9 @@
+
 // const fetch = require('node-fetch');
 // const Participant = require('./models/participant')
 
-
 // // Set up the Eventbrite API request parameters
-// const token = "5ETLBN4MURLGLSMBADDN";
+// const token = "";
 // const eventId = "430916953207";
 // const url = `https://www.eventbriteapi.com/v3/events/${eventId}/attendees/`;
 
@@ -23,14 +23,14 @@
 
 //     const attendees = data.attendees;
 
-//     // Insert the attendee data into the MongoDB collection
+//     // Insert the attendee data into the collection
 //     const result = await Participant.insertMany(
 //       attendees.map(attendee => ({ name: attendee.profile.name, location: `${attendee.profile.addresses.home.city}, ${attendee.profile.addresses.home.region}`  }))
 //     );
-//     console.log("seed documents inserted into the collection");
+//     console.log("Eventbrite seed documents inserted into the collection");
 
 //   } catch (err) {
-//     console.error(err);
+//     console.error("No API Token");
 //   } 
 // }
 
