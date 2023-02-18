@@ -10,6 +10,7 @@
 
 # production
 /build
+seed.js
 
 # misc
 .DS_Store
