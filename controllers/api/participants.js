@@ -7,6 +7,8 @@ async function index(req, res, next) {
 		Participant.find()
 			.then((participants) => {
 				return participants.map((participant) => participant)
+                .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
 			})
 			.then((participants) => {
 				res.status(200).json({ participants: participants })
