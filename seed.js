@@ -3,7 +3,7 @@
 // const Participant = require('./models/participant')
 
 // // Set up the Eventbrite API request parameters
-// const token = "";
+// const token = "5ETLBN4MURLGLSMBADDN";
 // const eventId = "430916953207";
 // const url = `https://www.eventbriteapi.com/v3/events/${eventId}/attendees/`;
 
