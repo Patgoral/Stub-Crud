@@ -17,11 +17,11 @@ export default function Map() {
 			></iframe>
 		
 		<div className="info-container">
-				
+
 		<Icon icon="material-symbols:calendar-today-rounded" width="60" height="60" />
 		<h4>Date and Time</h4>
 		<h5>Sat, Mar 25, 2023, 8:00 AM EDT</h5>
-			
+				<br></br>
 		<Icon icon="material-symbols:person-pin-circle" width="60" height="60" />
 		<h4>Location</h4>
 		<h5>Cedar Creek WMA Check Station Checking Station Road Southwest Eatonton, GA 31024</h5>
@@ -31,3 +31,4 @@ export default function Map() {
 	
 	)
 }
+
