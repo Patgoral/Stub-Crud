@@ -1,10 +1,14 @@
 /* 1 rem = 16 pixels */
+*{
+    background-color: rgb(50, 50, 50);
+}
 .register-form-container{
     display: grid;
     margin-top: 16px;
     justify-content: center;
     align-content: center;
     min-height: 80vh;
+
 }
 .register-header{
     font-size: 36px;
