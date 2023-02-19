@@ -6,6 +6,7 @@ import AuthPage from '../AuthPage/AuthPage'
 import ManagePage from '../ManagePage/ManagePage'
 import Registration from '../Registration/Registration'
 import EventPage from '../EventPage/EventPage'
+import TestPage from '../../test/map/testPage/testPage'
 
 import { getUser } from '../../utilities/users-services'
 
@@ -27,6 +28,7 @@ function App() {
 						<Route path="/events/register" element={<Registration participant={participant} setParticipant={setParticipant} />} />
 						<Route path="/events" element={<EventPage />} />
 						<Route path="/manage" element={<ManagePage/>}/>
+						<Route path="test/" element={<TestPage />} />
 						<Route path="/" element={<EventPage />} />
 					</Routes>
 				</>
