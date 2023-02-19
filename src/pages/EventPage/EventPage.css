@@ -25,6 +25,7 @@ hr{
     align-items: center;
     max-width: 1280px;
     background-color: rgb(50, 50, 50);
+   
 }
 .registration-container{
     margin: auto;
@@ -110,6 +111,9 @@ p{
     border-radius: 0;
     min-width: min-content;
     padding: 15px;
+    position: absolute;
+    right: 0px;
+
 }
 .list-container-overflow{
     max-height: 900px;
@@ -122,6 +126,7 @@ p{
     padding: 0;
     margin: 0 auto;
     background-color: rgb(50, 50, 50);
+    
 }
 .list-of-attendees > div{
     display: grid;
@@ -130,6 +135,7 @@ p{
     font-size: 20px;
     padding: 4px 10px;
     background-color: rgb(50, 50, 50);
+    
 }
 .footer{
     display: grid;
