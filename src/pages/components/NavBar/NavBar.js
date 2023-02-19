@@ -5,23 +5,26 @@ import "./NavBar.css"
 
 export default function NavBar({ user, setUser }) {
 
-  function handleLogOut () {
+  function handleLogOut() {
     // we should delegate the actual logging out to the users service
     userService.logOut()
     setUser(null)
   }
-    return(
+  return (
+    <div className='top-nav-container'>
       <div className='top-nav'>
-        <img className='image' src={logo}></img>
+        <div className='logo'><img src={logo}></img></div>
+
         <nav>
-          <Link className='link' to="/events">Event Page</Link>
-          &nbsp; | &nbsp;
+          <Link className='link' to="/events">Event&nbsp;Page</Link>
+          &nbsp; <span className='divider'>|</span> &nbsp;
           <Link className='link' to="/events/register">Register</Link>
-          &nbsp; | &nbsp;
+          &nbsp; <span className='divider'>|</span> &nbsp;
           <span className='welcome'>Welcome, {user.name}!</span>
-          &nbsp; | &nbsp;
-          <Link className='link' to="" onClick = {handleLogOut}>Log Out</Link>
+          &nbsp; <span className='divider'>|</span> &nbsp;
+          <Link className='link' to="" onClick={handleLogOut}>Log&nbsp;Out</Link>
         </nav>
       </div>
-    )
+    </div>
+  )
 }

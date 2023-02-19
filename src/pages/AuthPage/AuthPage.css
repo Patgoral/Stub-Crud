@@ -15,11 +15,10 @@ body{
     margin: 0px;
     padding: 0px;
 }
-hr{
-    width: 100%;
+.h-divider{
+    height: 2px;
     background-color: rgb(20, 20, 20);
-    height: 2.5px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .header-container{
     padding: 10px 0;

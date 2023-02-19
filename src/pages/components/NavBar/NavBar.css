@@ -1,29 +1,40 @@
+
+.top-nav-container{
+    background-color: black;
+}
 .top-nav{
     display: flex;
-    width: 100%;
-    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    /* width: 100vw; */
+    background-color: black;
 }
 nav{
     font-family: sans-serif;
     color: yellow;
     background-color: black;
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 4rem;
-    width: 100vw;
+    padding: 1rem;
+    /* width: 100vw; */
+}
+.welcome{
+    font-size: 1.8rem;
+    font-style: italic;
+    color: yellow;
+    background-color: black;
+    padding: 0 1rem;
 }
 .link{
     color: lightblue;
     font-size: 1.8rem;
     background-color: black;
+    padding: 0 20px;
 }
 .link:hover{
     color:aliceblue;
 }
-.welcome{
-    font-size: 2.3rem;
-    font-style: italic;
+.divider{
     color: yellow;
-    background-color: black;
+    font-size: x-large;
 }
