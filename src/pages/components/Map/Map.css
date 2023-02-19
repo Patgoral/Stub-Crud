@@ -1,13 +1,17 @@
 .map-container {
-    display: grid; 
-    grid-template-columns: .5fr .5fr; 
-    grid-template-rows: .2fr .2fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "a a"
-      "a a"; 
-      padding: 20px;
-     align-items: center;
-    }
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr;
+	grid-template-rows: 0.2fr 0.2fr;
+	gap: 0px 0px;
+	grid-template-areas:
+		'a b'
+		'a b';
+	padding: 20px;
+	align-content: space-evenly;
+    justify-content: center;
+    align-content: center;
+}
 
-  
+.info-container {
+margin-top: 40px;
+}

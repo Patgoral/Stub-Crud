@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import * as participantsAPI from '../../utilities/participants-api'
 import './Registration.css'
+import Map from '../components/Map/Map'
 
 export default function Registration({ participant, setParticipant }) {
 	const navigate = useNavigate()
@@ -24,9 +25,11 @@ export default function Registration({ participant, setParticipant }) {
 	}
 
 	return (
+        <>
+     
        		<div className="register-form-container">
      
-			<div className="register-header">Register for the Event</div>
+			<div className="register-header">Register for Fried Clay 200k</div>
 			<form className="register-form" onSubmit={handleAddParticipant}>
 				<input
 					placeholder="Name"
@@ -45,7 +48,8 @@ export default function Registration({ participant, setParticipant }) {
 				</button>
 			</form>
 		</div>
-   
+        <Map />
+        </>
 	)
 }
 {
