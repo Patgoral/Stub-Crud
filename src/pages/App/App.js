@@ -6,16 +6,15 @@ import AuthPage from '../AuthPage/AuthPage'
 import ManagePage from '../ManagePage/ManagePage'
 import Registration from '../Registration/Registration'
 import EventPage from '../EventPage/EventPage'
-import TestPage from '../../test/map/testPage/testPage'
+import TestPage from '../components/Map/Map'
 
 import { getUser } from '../../utilities/users-services'
-
 
 function App() {
 	const [user, setUser] = useState(getUser())
 	const [participant, setParticipant] = useState({
 		name: '',
-		location: ''
+		location: '',
 	})
 
 	return (
@@ -24,10 +23,17 @@ function App() {
 				<>
 					<NavBar user={user} setUser={setUser} />
 					<Routes>
-
-						<Route path="/events/register" element={<Registration participant={participant} setParticipant={setParticipant} />} />
+						<Route
+							path="/events/register"
+							element={
+								<Registration
+									participant={participant}
+									setParticipant={setParticipant}
+								/>
+							}
+						/>
 						<Route path="/events" element={<EventPage />} />
-						<Route path="/manage" element={<ManagePage/>}/>
+						<Route path="/manage" element={<ManagePage />} />
 						<Route path="test/" element={<TestPage />} />
 						<Route path="/" element={<EventPage />} />
 					</Routes>
@@ -40,4 +46,3 @@ function App() {
 }
 
 export default App
-
