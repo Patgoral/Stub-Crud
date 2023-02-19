@@ -34,7 +34,6 @@ function App() {
 						/>
 						<Route path="/events" element={<EventPage />} />
 						<Route path="/manage" element={<ManagePage />} />
-						<Route path="test/" element={<TestPage />} />
 						<Route path="/" element={<EventPage />} />
 					</Routes>
 				</>
