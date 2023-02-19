@@ -1,0 +1,13 @@
+.map-container {
+    display: grid; 
+    grid-template-columns: .5fr .5fr; 
+    grid-template-rows: .2fr .2fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "a a"
+      "a a"; 
+      padding: 20px;
+     align-items: center;
+    }
+
+  
