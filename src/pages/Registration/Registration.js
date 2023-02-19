@@ -25,8 +25,10 @@ export default function Registration({ participant, setParticipant }) {
 	}
 
 	return (
+        <>
+      
 		<div className="register-form-container">
-        
+        <Map />
 			<div className="register-header">Register for the Event</div>
 			<form className="register-form" onSubmit={handleAddParticipant}>
 				<input
@@ -46,6 +48,7 @@ export default function Registration({ participant, setParticipant }) {
 				</button>
 			</form>
 		</div>
+        </>
 	)
 }
 {
