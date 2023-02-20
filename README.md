@@ -11,13 +11,15 @@ StubCrud is a web app designed for users to register for events, as well as mana
 ---
 ## The Team:
 
-| The Team:       |                      |
+| **Name:**       | **Role:**            |
 | --------------- | -------------------- |
+|                 |                      |
 | -Jose Melendez: | -Github Manager      |
 |                 | -Front End Developer |
 |                 |                      |
 | -Tim Martinson: | -SCRUM MASTER        |
 |                 | -Front End Developer |
+|                 |                      |
 | -Edward Ho:     | -Front End Developer |
 |                 | -UI Design           |
 |                 |                      |
