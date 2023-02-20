@@ -10,8 +10,8 @@ StubCrud is a web app designed for users to register for events, as well as mana
 
 ---
 
+## The Team:
 
-| The Team:       |                      |
 | --------------- | -------------------- |
 | -Jose Melendez: | -Github Manager      |
 |                 | -Front End Developer |
