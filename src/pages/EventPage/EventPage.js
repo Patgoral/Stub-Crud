@@ -57,14 +57,12 @@ export default function EventPage() {
                         <p> If you chose to camp on the route, there will be marked primitive campsites on the route guide you will receive via e-mail before the event. Your registration gets you the GPX route, an in-depth route guide, and a dope patch.</p>
                         <p> We will have a camp setup the night before if you choose to come down early! You will receive more details via email once registered. This event will take place rain or shine! There are no refunds on registration, but you can transfer your registration. If you have any questions, feel free to reach out.</p>
                     </div>
-                    <h3>Event Video</h3>
-                    <YoutubeEmbed />
                 </div>
                 <div className='attendees-container'>
                     <div className='attendees-header'>List of Attendees</div>
                     <div className='list-container-overflow'>{participantList}</div>
                 </div>
-               
+                <div className='event-video'><YoutubeEmbed /></div>
             </div>
         </div>
     )
