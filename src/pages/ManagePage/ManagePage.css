@@ -21,17 +21,21 @@
 h2{
     margin-bottom: 10px;
 }
+hr {
+    width: 100%;
+    background-color:black;
+    height: 10px;
+    margin: 0;
+    padding: 0px;
+    border: none;
+}
 .user-attendees{
     display: grid;
     grid-template-columns: 1.5fr 2fr;
-    /* padding: 0;
-    margin: 0 auto; */
     background-color: rgb(50, 50, 50);
-    padding: 30px;
-    /* margin-bottom: 3%; */
+    padding: 25px;
     border: solid white;
     border-width: 5px;
-    border-radius: 1%;
 }
 .name-label{
     color: yellow;

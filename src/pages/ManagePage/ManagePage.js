@@ -65,7 +65,6 @@ export default function ManagePage() {
 
     participantList = userListOfAttendees.map((participant) => (
         <>
-            <hr />
             <div className='user-attendees' key={participant._id}>
                 <div className='name-label'>
                     {participant.name}
@@ -101,7 +100,7 @@ export default function ManagePage() {
     return (
         <div className="ManagePage">
             <h2>Manage Registration</h2>
-              <h3 id="message-container"></h3>
+            <h3 id="message-container"></h3>
             <hr />
             <div className="user-attendee-list">{participantList}</div>
         </div>
