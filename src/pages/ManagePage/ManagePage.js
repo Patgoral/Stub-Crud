@@ -3,12 +3,15 @@ import { getUser } from '../../utilities/users-services';
 import { useState, useEffect } from 'react'
 import * as participantsAPI from '../../utilities/participants-api'
 
+
+
 export default function ManagePage() {
     const [participants, setParticipants] = useState([])
     const currentUser = getUser()
     let participantList;
     let userListOfAttendees = [];
     let updatedList;
+    const messageContainer = document.querySelector('#message-container')
 
     useEffect(function () {
         async function getAllParticipants() {
@@ -24,6 +27,7 @@ export default function ManagePage() {
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
             setParticipants(participants)
+            messageContainer.innerHTML = 'Registration Deleted'
         }
         getAllParticipants()
     }
@@ -35,6 +39,8 @@ export default function ManagePage() {
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
             setParticipants(participants)
+            messageContainer.innerHTML = 'Registration Updated'
+
         }
         getAllParticipants()
     }
@@ -91,6 +97,7 @@ export default function ManagePage() {
     return (
         <div>
             <h2>Manage Registration</h2>
+            <h3 id="message-container"></h3>
             <div>{participantList}</div>
         </div>
     )

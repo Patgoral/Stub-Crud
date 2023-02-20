@@ -3,28 +3,29 @@
 
 StubCrud is a web app designed for users to register for events, as well as manage their registrations.  
 
-<img src='readme_img/signin.png' width="33%" > 
-<img src='readme_img/eventpage.png' width="33%"> 
-<img src='readme_img/register.png' width="33%"> 
-
+<p align="center">
+| <img width="250px" height="250px" src='readme_img/signin.png'> |
+<img width="250px" height="250px" src='readme_img/eventpage.png'> |
+<img width="250px" height="250px" src='readme_img/register.png'> |
+</p>
 
 ---
 ## The Team:
 
-| **Name:**       | **Role:**            |
-| --------------- | -------------------- |
-|                 |                      |
-| -Jose Melendez: | -Github Manager      |
-|                 | -Front End Developer |
-|                 |                      |
-| -Tim Martinson: | -SCRUM MASTER        |
-|                 | -Front End Developer |
-|                 |                      |
-| -Edward Ho:     | -Front End Developer |
-|                 | -UI Design           |
-|                 |                      |
-| -Pat Goral:     | -Back End Developer  |
-|                 | -Documenter          |
+| **Name:**            | **Role:**             |
+| -------------------- | --------------------- |
+|                      |                       |
+| **- Jose Melendez:** | - Github Manager      |
+|                      | - Front End Developer |
+|                      |                       |
+| **- Tim Martinson:** | - SCRUM Master        |
+|                      | - Front End Developer |
+|                      |                       |
+| **- Edward Ho:**     | - Front End Developer |
+|                      | - UI Design           |
+|                      |                       |
+| **- Pat Goral:**     | - Back End Developer  |
+|                      | - Documenter          |
 
 
 ## Technologies Used
@@ -38,12 +39,18 @@ StubCrud is a web app designed for users to register for events, as well as mana
 | HTML5      | MongoDB  |
 | Mongoose   | CSS3     |
 
+## API Integration
+
+We utilized a third party API from Eventbrite.com.  We used real participant data from the actual Fried Clay 200k event that Pat Goral organizes to seed our database and provide a list of actual participants and their locations.
+
+<img width="400px" src='readme_img/eventbrite.png'> 
 
 
 ## Getting Started:
 
 ### View the deployed page here:
-LINK
+
+[View StubCrud](https://trello.com/b/ZFkGbE5Q/project-3)
 
 <table>
 <tr>
@@ -52,6 +59,9 @@ LINK
 </td>
 </tr>
 </table>
+
+
+## Planning Docs:
 
 ### Trello Board:
 
