@@ -57,10 +57,15 @@ LINK
 
 [View Trello Board](https://trello.com/b/ZFkGbE5Q/project-3)
 
+<img width="500px" src='readme_img/trello.png'>
+
 
 ### Pitch Deck
 
 [View Pitch Deck](https://docs.google.com/presentation/d/1m-4NvatLkOq-8CiPD1W6_KrEP4eqX6Ccz9J3V0H-94g/edit#slide=id.p)
+
+<img width="500px" src='readme_img/pitchdeck.png'>
+
 
 ---
 
