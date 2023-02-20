@@ -56,3 +56,7 @@ hr {
     color: lightblue;
     
 }
+
+#message-container {
+    text-shadow: yellow 4px 0 10px;
+}
