@@ -47,13 +47,13 @@ export default function ManagePage() {
 
     function handleInputChange(event, id) {
         const updatedParticipants = participants.participants.map(p => {
-          if (p._id === id) {
-            return { ...p, [event.target.name]: event.target.value }
-          }
-          return p
+            if (p._id === id) {
+                return { ...p, [event.target.name]: event.target.value }
+            }
+            return p
         })
         setParticipants({ participants: updatedParticipants })
-      }
+    }
 
     if (participants.length !== 0 && participants.participants !== undefined) {
         participants.participants.forEach(function (participant) {
@@ -64,41 +64,46 @@ export default function ManagePage() {
     }
 
     participantList = userListOfAttendees.map((participant) => (
-        <div className='list-of-attendees' key={participant._id}>
-            <div className='name-label'>
-                {participant.name}
-                <input 
-                placeholder='name'
-                name='name'
-                value={participant.name || ''}
-                onChange={(event) => handleInputChange(event, participant._id)}></input>
+        <>
+            <hr />
+            <div className='user-attendees' key={participant._id}>
+                <div className='name-label'>
+                    {participant.name}
+                    <input
+                        placeholder='name'
+                        name='name'
+                        value={participant.name || ''}
+                        onChange={(event) => handleInputChange(event, participant._id)}></input>
+                </div>
+                <div className='location-label'>
+                    {participant.location}
+                    <input
+                        placeholder='location'
+                        name='location'
+                        value={participant.location || ''}
+                        onChange={(event) => handleInputChange(event, participant._id)}></input>
+                </div>
+                <button className='edit-button'
+                    onClick={() => handleEditParticipant(
+                        participant._id,
+                        participant.name,
+                        participant.location
+                    )}>Edit</button>
+                <button className='delete-button'
+                    onClick={() => handleDeleteParticipant(participant._id)}>
+                    Delete
+                </button>
             </div>
-            <div className='location-label'>
-                {participant.location}
-                <input 
-                placeholder='location'
-                name='location'
-                value={participant.location || ''}
-                onChange={(event) => handleInputChange(event, participant._id)}></input>
-            </div>
-            <button className='edit-button'
-                onClick={() => handleEditParticipant(
-                    participant._id,
-                    participant.name, 
-                    participant.location
-                )}>Edit</button>
-            <button className='delete-button'
-                onClick={() => handleDeleteParticipant(participant._id)}>
-                Delete
-            </button>
-        </div>
+            <hr />
+        </>
     ))
 
     return (
-        <div>
+        <div className="ManagePage">
             <h2>Manage Registration</h2>
-            <h3 id="message-container"></h3>
-            <div>{participantList}</div>
+              <h3 id="message-container"></h3>
+            <hr />
+            <div className="user-attendee-list">{participantList}</div>
         </div>
     )
 }

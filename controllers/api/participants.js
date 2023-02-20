@@ -23,6 +23,7 @@ async function show(req, res, next) {
 		await Participant.find({ owner: req.user._id })
 			.then((participants) => {
 				return participants.map((participant) => participant)
+				.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
 			})
 			.then((participants) => {
 				res.status(200).json({ participants: participants })
@@ -45,6 +46,7 @@ async function create(req, res, next) {
 		res.status(400).json(error)
 	}
 }
+
 
 // PATCH
 async function patch(req, res, next) {
