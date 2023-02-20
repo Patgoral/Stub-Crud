@@ -44,7 +44,8 @@ StubCrud is a web app designed for users to register for events, as well as mana
 ## Getting Started:
 
 ### View the deployed page here:
-LINK
+
+[View StubCrud](https://trello.com/b/ZFkGbE5Q/project-3)
 
 <table>
 <tr>
