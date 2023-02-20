@@ -39,6 +39,11 @@ StubCrud is a web app designed for users to register for events, as well as mana
 | HTML5      | MongoDB  |
 | Mongoose   | CSS3     |
 
+## API Integration
+
+We utilized a third party API from Eventbrite.com.  We used real participant data from the actual Fried Clay 200k event that Pat Goral organizes to seed our database and provide a list of actual participants and their locations.
+
+<img width="250px" height="250px" src='readme_img/eventbrite.png'> 
 
 
 ## Getting Started:
