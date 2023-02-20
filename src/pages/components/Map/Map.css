@@ -10,6 +10,7 @@
 	align-content: space-evenly;
     justify-content: center;
     align-content: center;
+	background-color: rgb(50, 50, 50)
 }
 
 .info-container {
