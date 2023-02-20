@@ -3,6 +3,7 @@
 
 StubCrud is a web app designed for users to register for events, as well as manage their registrations.  
 
+<img width="960px" src='readme_img/signin.png'>
 
 ---
 
@@ -22,6 +23,7 @@ StubCrud is a web app designed for users to register for events, as well as mana
 
 ### -Pat Goral:
 -Back End Developer
+-Documenter
 
 ## Technologies Used
 
