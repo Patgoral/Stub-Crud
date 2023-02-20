@@ -6,7 +6,6 @@
 }
 form{
     display: grid;
-    max-width: 500px;
 }
 form > button{
     background-color: darkslategray;
@@ -16,7 +15,7 @@ form > button{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24px;
+    font-size: 20px;
     margin: auto;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -29,6 +28,6 @@ form > button:hover {
 label{
     align-content: center;
     text-align: left;
-    font-size: 24px;
+    font-size: 20px;
     background-color: transparent;
 }

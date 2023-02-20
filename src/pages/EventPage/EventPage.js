@@ -35,7 +35,7 @@ export default function EventPage() {
     return (
         <div className='event-page'>
             <div className='event-page-container-top'>
-                <div className='logo'>
+                <div className='event-logo'>
                     <img className='logo-img' src={logo}></img>
                 </div>
                 <div className='registration-container'>
