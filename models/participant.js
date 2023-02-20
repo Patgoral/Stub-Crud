@@ -3,7 +3,10 @@ const Schema = mongoose.Schema
 
 const participantSchema = new Schema(
 	{
-		name: {type: String, required: true},
+		name: {
+			type: String, 
+			required: true
+		},
 		location: {
 			type: String
 		},
