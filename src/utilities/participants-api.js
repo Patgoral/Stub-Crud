@@ -14,8 +14,8 @@ export function addParticipant(data){
     return sendRequest(`${BASE_URL}` + '/', 'POST', data)
 }
 
-export function updateParticipant(participantId){
-    return sendRequest(`${BASE_URL}/${participantId}`, 'PATCH')
+export function updateParticipant(participantId, participant){
+    return sendRequest(`${BASE_URL}/${participantId}`, 'PATCH', {participant})
 }
 
 export function removeParticipant(participantId){

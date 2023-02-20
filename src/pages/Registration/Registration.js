@@ -5,6 +5,7 @@ import Map from '../components/Map/Map'
 
 export default function Registration({ participant, setParticipant }) {
 	const navigate = useNavigate()
+  
 	//ADD A PARTICIPANT
 	async function handleAddParticipant(event) {
 		event.preventDefault()

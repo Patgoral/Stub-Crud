@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Stub Crud
+## A group project using the MERN-Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+StubCrud is a web app designed for users to register for events, as well as manage their registrations.  
 
-## Available Scripts
+<p align="center">
+| <img width="250px" height="250px" src='readme_img/signin.png'> |
+<img width="250px" height="250px" src='readme_img/eventpage.png'> |
+<img width="250px" height="250px" src='readme_img/register.png'> |
+</p>
 
-In the project directory, you can run:
+---
+## The Team:
 
-### `npm start`
+| **Name:**            | **Role:**             |
+| -------------------- | --------------------- |
+|                      |                       |
+| **- Jose Melendez:** | - Github Manager      |
+|                      | - Front End Developer |
+|                      |                       |
+| **- Tim Martinson:** | - SCRUM Master        |
+|                      | - Front End Developer |
+|                      |                       |
+| **- Edward Ho:**     | - Front End Developer |
+|                      | - UI Design           |
+|                      |                       |
+| **- Pat Goral:**     | - Back End Developer  |
+|                      | - Documenter          |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+![Technologies Used](https://skillicons.dev/icons?i=react,nodejs,express,mongodb,js,html,css)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Code       |          |
+| ---------- | -------- |
+| React      | Node     |
+| JavaScript | Express  |
+| HTML5      | MongoDB  |
+| Mongoose   | CSS3     |
 
-### `npm run build`
+## API Integration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We utilized a third party API from Eventbrite.com.  We used real participant data from the actual Fried Clay 200k event that Pat Goral organizes to seed our database and provide a list of actual participants and their locations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="400px" src='readme_img/eventbrite.png'> 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Getting Started:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### View the deployed page here:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[View StubCrud](https://trello.com/b/ZFkGbE5Q/project-3)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<table>
+<tr>
+<td>
+  Upon loading the page, you are prompted to sign in or sign up for the service.  Once registered and signed in, you will view the details for the event.  This includes a description as well as a list of all participants registered.  You can register as many participants as you'd like using the register button.  Once registered, you can manage your registrations by either updating or deleting them entirely.  Once finished, you can log out to exit the app.
+</td>
+</tr>
+</table>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Planning Docs:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Trello Board:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[View Trello Board](https://trello.com/b/ZFkGbE5Q/project-3)
 
-### Code Splitting
+<img width="500px" src='readme_img/trello.png'>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Pitch Deck
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[View Pitch Deck](https://docs.google.com/presentation/d/1m-4NvatLkOq-8CiPD1W6_KrEP4eqX6Ccz9J3V0H-94g/edit#slide=id.p)
 
-### Making a Progressive Web App
+<img width="500px" src='readme_img/pitchdeck.png'>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Future Goals:
 
-### Deployment
+#### Version 2:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-As a user I want to be able to create many events
 
-### `npm run build` fails to minify
+-As a user I want to be able to invite others to my event
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-As a user I want to have a search function for events
+
+#### Version 3:
+
+-As an admin I want to be able to implement payment for my events
+
+-As an admin I want to be able to manage participants
+
+-As a user I want to be able to post my event on social media.
+
