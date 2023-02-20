@@ -66,5 +66,17 @@ LINK
 
 #### Version 2:
 
+-As a user I want to be able to create many events
+
+-As a user I want to be able to invite others to my event
+
+-As a user I want to have a search function for events
+
 #### Version 3:
+
+-As an admin I want to be able to implement payment for my events
+
+-As an admin I want to be able to manage participants
+
+-As a user I want to be able to post my event on social media.
 
