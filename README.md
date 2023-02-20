@@ -9,7 +9,7 @@ StubCrud is a web app designed for users to register for events, as well as mana
 
 
 ---
-## The Team
+## The Team:
 
 |        |                      |
 | --------------- | -------------------- |
@@ -18,7 +18,7 @@ StubCrud is a web app designed for users to register for events, as well as mana
 |                 |                      |
 | -Tim Martinson: | -SCRUM MASTER        |
 |                 | -Front End Developer |
-|                 |                      |
+<br>
 | -Edward Ho:     | -Front End Developer |
 |                 | -UI Design           |
 |                 |                      |
