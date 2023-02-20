@@ -1,3 +1,26 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+.ManagePage{
+    display: grid;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+.message-container {
+    background-color: rgb(50, 50, 50);
+}
+h2{
+    margin-bottom: 10px;
+    background-color: rgb(50, 50, 50)
+}
+hr {
+    width: 100%;
+    background-color:black;
+    height: 10px;
+    margin: 0;
+    padding: 0px;
+    border: none;
+}
 .delete-button{
     color: whitesmoke;
     background-color: darkred;
@@ -17,17 +40,6 @@
     border-radius: 10px;
     background-color: green;
     color: white;
-}
-h2{
-    margin-bottom: 10px;
-}
-hr {
-    width: 100%;
-    background-color:black;
-    height: 10px;
-    margin: 0;
-    padding: 0px;
-    border: none;
 }
 .user-attendees{
     display: grid;
