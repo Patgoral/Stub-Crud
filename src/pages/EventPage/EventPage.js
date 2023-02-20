@@ -31,25 +31,21 @@ export default function EventPage() {
             </div>
         ))
     }
-    //this is a test
     return (
         <div className='event-page'>
-            {/* <h2>Event Page</h2> */}
             <div className='event-page-container-top'>
                 <div className='logo'>
                     <img className='logo-img' src={logo}></img>
                 </div>
                 <div className='registration-container'>
-                    <div>
+                    <div className='next-event'>
                         The Next Event will be <br /> March 25, 2023<br />Join Us!
                     </div>
-                    <div>
+                    <div className='button-div'>
                         <button onClick={handleCheckToken}>Manage Registration</button>
                     </div>
-
                 </div>
             </div>
-            <hr />
             <div className='event-page-container-bottom'>
                 <div className='event-desc-container'>
                     <div className='event-desc-header'>About this Event</div>
@@ -66,7 +62,6 @@ export default function EventPage() {
                     <div className='list-container-overflow'>{participantList}</div>
                 </div>
             </div>
-            <div className='footer'>&nbsp;</div>
         </div>
     )
 }

@@ -13,8 +13,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <div className='top-nav-container'>
       <div className='top-nav'>
-        <div className='logo'><img src={logo}></img></div>
-
+        <div className='stub-logo'><img src={logo} /></div>
         <nav>
           <Link className='link' to="/events">Event&nbsp;Page</Link>
           &nbsp; <span className='divider'>|</span> &nbsp;
