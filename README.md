@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Stub Crud
+## A group project using the MERN-Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+StubCrud is a web app designed for users to register for events, as well as manage their registrations.  
 
-## Available Scripts
+<img src='readme_img/signin.png' width="33%" > 
+<img src='readme_img/eventpage.png' width="33%"> 
+<img src='readme_img/register.png' width="33%"> 
 
-In the project directory, you can run:
 
-### `npm start`
+---
+## The Team:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| **Name:**       | **Role:**            |
+| --------------- | -------------------- |
+|                 |                      |
+| -Jose Melendez: | -Github Manager      |
+|                 | -Front End Developer |
+|                 |                      |
+| -Tim Martinson: | -SCRUM MASTER        |
+|                 | -Front End Developer |
+|                 |                      |
+| -Edward Ho:     | -Front End Developer |
+|                 | -UI Design           |
+|                 |                      |
+| -Pat Goral:     | -Back End Developer  |
+|                 | -Documenter          |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Technologies Used](https://skillicons.dev/icons?i=react,nodejs,express,mongodb,js,html,css)
 
-### `npm run build`
+| Code       |          |
+| ---------- | -------- |
+| React      | Node     |
+| JavaScript | Express  |
+| HTML5      | MongoDB  |
+| Mongoose   | CSS3     |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started:
 
-### `npm run eject`
+### View the deployed page here:
+LINK
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<table>
+<tr>
+<td>
+  Upon loading the page, you are prompted to sign in or sign up for the service.  Once registered and signed in, you will view the details for the event.  This includes a description as well as a list of all participants registered.  You can register as many participants as you'd like using the register button.  Once registered, you can manage your registrations by either updating or deleting them entirely.  Once finished, you can log out to exit the app.
+</td>
+</tr>
+</table>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Trello Board:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[View Trello Board](https://trello.com/b/ZFkGbE5Q/project-3)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img width="500px" src='readme_img/trello.png'>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Pitch Deck
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[View Pitch Deck](https://docs.google.com/presentation/d/1m-4NvatLkOq-8CiPD1W6_KrEP4eqX6Ccz9J3V0H-94g/edit#slide=id.p)
 
-### Code Splitting
+<img width="500px" src='readme_img/pitchdeck.png'>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Goals:
 
-### Making a Progressive Web App
+#### Version 2:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-As a user I want to be able to create many events
 
-### Advanced Configuration
+-As a user I want to be able to invite others to my event
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-As a user I want to have a search function for events
 
-### Deployment
+#### Version 3:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-As an admin I want to be able to implement payment for my events
 
-### `npm run build` fails to minify
+-As an admin I want to be able to manage participants
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-As a user I want to be able to post my event on social media.
+
