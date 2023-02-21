@@ -36,7 +36,6 @@ function App() {
 						<Route path="/manage" element={<ManagePage />} />
 						<Route path="/" element={<EventPage />} />
 						<Route path="/*" element={<EventPage />} />
-						<Redirect from="*" to="/" />
 					</Routes>
 				</>
 			) : (
