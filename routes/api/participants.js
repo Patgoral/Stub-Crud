@@ -1,7 +1,7 @@
 const express = require('express')
 const router= express.Router()
 const participantsCtrl = require('../../controllers/api/participants')
-// const participantsSeed = require('../../seed')
+const participantsSeed = require('../../seed')
 
 
 // GET /api/participants
