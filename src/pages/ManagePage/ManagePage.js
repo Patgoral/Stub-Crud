@@ -22,8 +22,6 @@ export default function ManagePage() {
 
     async function handleDeleteParticipant(id) {
         await participantsAPI.removeParticipant(id)
-        //left it here for reference
-        //participants.participants.filter(p => p._id !== id)
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
             setParticipants(participants)
@@ -106,7 +104,7 @@ export default function ManagePage() {
     return (
         <div className="ManagePage">
             <h2>Manage Registration</h2>
-            {/* <h3 id="message-container"></h3> */}
+            <h3 id="message-container"> </h3>
             <hr />
             <div className="user-attendee-list">{participantList}</div>
         </div>
