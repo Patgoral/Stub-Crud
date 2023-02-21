@@ -29,7 +29,8 @@ app.use('/api/participants', require('./routes/api/participants'))
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests
 app.get('/*', function (req, res) {
-  res.sendFile(path.join('/events', '/events/register', '/manage', 'index.html'));
+  res.sendFile('index.html');
+  console.log(WHOOPS)
 });
 
 app.listen(port, function () {
