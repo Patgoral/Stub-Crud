@@ -11,7 +11,7 @@ const headers = {
 
 
 async function seed() {
-        await Participant.deleteMany({})
+        // await Participant.deleteMany({})
 
   try {
   

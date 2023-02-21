@@ -29,7 +29,7 @@ function App() {
 								<Registration
 									participant={participant}
 									setParticipant={setParticipant}
-								/>
+								/> 
 							}
 						/>
 						<Route path="/events" element={<EventPage />} />
