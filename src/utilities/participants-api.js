@@ -1,6 +1,6 @@
 import {sendRequest, sendRequestToDelete} from './users-api'
 
-const BASE_URL = '/api/participants'
+const BASE_URL = 'https://deploytest2.onrender.com/api/participants'
 
 export function showParticipants() {
     return sendRequest(BASE_URL)
