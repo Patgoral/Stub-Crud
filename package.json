@@ -45,7 +45,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001",
   "devDependencies": {
     "@iconify/react": "^4.1.0"
   }
