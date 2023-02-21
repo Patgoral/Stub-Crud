@@ -5,8 +5,9 @@ StubCrud is a web app designed for users to register for events, as well as mana
 
 <p align="center">
 | <img width="250px" height="250px" src='readme_img/signin.png'> |
-<img width="250px" height="250px" src='readme_img/eventpage.png'> |
+<img width="250px" height="250px" src='readme_img/eventpage.png'> 
 <img width="250px" height="250px" src='readme_img/register.png'> |
+<img width="250px" height="250px" src='readme_img/update.png'>  |
 </p>
 
 ---
@@ -25,7 +26,7 @@ StubCrud is a web app designed for users to register for events, as well as mana
 |                      | - UI Design           |
 |                      |                       |
 | **- Pat Goral:**     | - Back End Developer  |
-|                      | - Documenter          |
+|                      | - Deployment Manager  |
 
 
 ## Technologies Used
