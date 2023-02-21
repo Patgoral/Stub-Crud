@@ -1,5 +1,3 @@
-
-const fetch = require('node-fetch');
 const Participant = require('./models/participant')
 
 // Set up the Eventbrite API request parameters
