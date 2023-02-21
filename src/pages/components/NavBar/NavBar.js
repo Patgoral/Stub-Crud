@@ -13,9 +13,9 @@ export default function NavBar({ user, setUser }) {
   return (
     <div className='top-nav-container'>
       <div className='top-nav'>
-      <Link to="/"> <div className='stub-logo'><img src={logo} /></div></Link>
+      <Link to="/events"> <div className='stub-logo'><img src={logo} /></div></Link>
         <nav>
-          <Link className='link' to="/">Event&nbsp;Page</Link>
+          <Link className='link' to="/events">Event&nbsp;Page</Link>
           &nbsp; <span className='divider'>|</span> &nbsp;
           <Link className='link' to="/events/register">Register</Link>
           &nbsp; <span className='divider'>|</span> &nbsp;
