@@ -7,9 +7,29 @@ import logo from '../assets/fried-clay.png'
 import YoutubeEmbed from '../components/Video/Video'
 
 export default function EventPage() {
+    const navigate = useNavigate()
     const [participants, setParticipants] = useState([])
     let participantList;
-    const navigate = useNavigate()
+
+    let eventDate = new Date("March 25, 2023 00:00:00").getTime()
+    const [day, setDay] = useState(0);
+    const [hour, setHour] = useState(0);
+    const [minute, setMinute] = useState(0);
+    const [second, setSecond] = useState(0);
+    
+    useEffect(()=>{
+        const countDown = setInterval(function () {
+            let currentDate = new Date().getTime()
+            let timeBetween = eventDate - currentDate;
+            setDay(Math.floor(timeBetween / (1000 * 60 * 60 * 24)))
+            setHour(Math.floor((timeBetween % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
+            setMinute(Math.floor((timeBetween % (1000 * 60 * 60)) / (1000 * 60)))
+            setSecond(Math.floor((timeBetween % (1000 * 60)) / 1000))
+        }, 1000)
+        return function(){ 
+            clearInterval(countDown) 
+        }
+    }, [day], [hour], [minute], [second])
 
     async function handleCheckToken() {
         checkToken()
@@ -40,7 +60,7 @@ export default function EventPage() {
                 </div>
                 <div className='registration-container'>
                     <div className='next-event'>
-                        The Next Event will be <br /> March 25, 2023<br />Join Us!
+                        The Next Event will be <br /> March 25, 2023<br />{day}d {hour}h {minute}m {second}s
                     </div>
                     <div className='button-div'>
                         <button onClick={handleCheckToken}>Manage Registration</button>
