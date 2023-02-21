@@ -61,7 +61,7 @@ export default function EventPage() {
         async function participantLength(){
         const length = await participants.participants.length;
             if(length > 0){
-                setButtonString('Management')
+                setButtonString('Manage Registration')
             }else{
                 setButtonString('Register')
             }
