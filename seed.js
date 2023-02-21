@@ -1,3 +1,4 @@
+const Participant = require('./models/participant')
 
 // Set up the Eventbrite API request parameters
 const token = process.env.EVENTBRITE_TOKEN
