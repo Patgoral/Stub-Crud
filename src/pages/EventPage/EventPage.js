@@ -16,8 +16,8 @@ export default function EventPage() {
     const [hour, setHour] = useState(0);
     const [minute, setMinute] = useState(0);
     const [second, setSecond] = useState(0);
-    
-    useEffect(()=>{
+
+    useEffect(() => {
         const countDown = setInterval(function () {
             let currentDate = new Date().getTime()
             let timeBetween = eventDate - currentDate;
@@ -26,8 +26,8 @@ export default function EventPage() {
             setMinute(Math.floor((timeBetween % (1000 * 60 * 60)) / (1000 * 60)))
             setSecond(Math.floor((timeBetween % (1000 * 60)) / 1000))
         }, 1000)
-        return function(){ 
-            clearInterval(countDown) 
+        return function () {
+            clearInterval(countDown)
         }
     }, [day], [hour], [minute], [second])
 
@@ -60,7 +60,8 @@ export default function EventPage() {
                 </div>
                 <div className='registration-container'>
                     <div className='next-event'>
-                        The Next Event will be <br /> March 25, 2023<br />{day}d {hour}h {minute}m {second}s
+                        <div className='event-caption'>The Next Event will be <br /> March 25, 2023<br /></div>
+                        {day}d {hour}h {minute}m {second}s
                     </div>
                     <div className='button-div'>
                         <button onClick={handleCheckToken}>Manage Registration</button>
