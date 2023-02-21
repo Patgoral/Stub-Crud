@@ -10,7 +10,7 @@ export default function AuthPage({ user, setUser }) {
 		<div className='auth-container'>
 			<div className='header-container'>
 				<div className='logo'>
-					<img className='image' src={friedClayLogo}></img>
+					<img className='image' src={friedClayLogo} alt={'fried clay logo'}></img>
 				</div>
 			</div>
 			<div className='login-container'>

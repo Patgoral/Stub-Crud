@@ -58,7 +58,3 @@ export default function Registration({ participant, setParticipant }) {
         </div>
     )
 }
-{
-    /* <Link className='link' to="/events">
-                <button type='submit'>Register</button></Link> */
-}

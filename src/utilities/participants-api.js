@@ -6,12 +6,12 @@ export function showParticipants() {
     return sendRequest(BASE_URL)
 }
 
-export function indexParticipants(data) {
-    return sendRequest(`${BASE_URL}` + '/user', 'POST')
+export function indexParticipants() {
+    return sendRequest(`${BASE_URL}/user`, 'POST')
 }
 
 export function addParticipant(data){
-    return sendRequest(`${BASE_URL}` + '/', 'POST', data)
+    return sendRequest(`${BASE_URL}/`, 'POST', data)
 }
 
 export function updateParticipant(participantId, participant){

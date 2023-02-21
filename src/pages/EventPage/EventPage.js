@@ -12,7 +12,6 @@ export default function EventPage() {
     const [participants, setParticipants] = useState([])
     let participantList;
 
-    let eventDate = new Date("March 25, 2023 00:00:00").getTime()
     const [day, setDay] = useState(0);
     const [hour, setHour] = useState(0);
     const [minute, setMinute] = useState(0);
@@ -20,6 +19,7 @@ export default function EventPage() {
 
     useEffect(() => {
         const countDown = setInterval(function () {
+            let eventDate = new Date("March 25, 2023 00:00:00").getTime()
             let currentDate = new Date().getTime()
             let timeBetween = eventDate - currentDate;
             setDay(Math.floor(timeBetween / (1000 * 60 * 60 * 24)))
@@ -73,7 +73,7 @@ export default function EventPage() {
         <div className='event-page'>
             <div className='event-page-container-top'>
                 <div className='event-logo'>
-                    <img className='logo-img' src={logo}></img>
+                    <img className='logo-img' src={logo} alt={'main logo'}></img>
                 </div>
                 <div className='registration-container'>
                     <div className='next-event'>
