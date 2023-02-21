@@ -1,9 +1,7 @@
-
-const fetch = require('node-fetch');
 const Participant = require('./models/participant')
 
 // Set up the Eventbrite API request parameters
-const token = process.env.token
+const token = process.env.EVENTBRITE_TOKEN
 const eventId = "430916953207";
 const url = `https://www.eventbriteapi.com/v3/events/${eventId}/attendees/`;
 
@@ -11,8 +9,9 @@ const headers = {
   "Authorization": `Bearer ${token}`
 };
 
+
 async function seed() {
-        await Participant.deleteMany({})
+        // await Participant.deleteMany({})
 
   try {
   
