@@ -1,5 +1,5 @@
 import { getToken } from './users-services'
-const BASE_URL = '/api/users'
+const BASE_URL = 'https://deploytest2.onrender.com/api/users'
 
 export async function signUp(userData) {
 
