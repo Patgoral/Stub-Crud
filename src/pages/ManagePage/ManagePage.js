@@ -66,17 +66,23 @@ export default function ManagePage() {
     participantList = userListOfAttendees.map((participant) => (
         <>
             <div className='user-attendees' key={participant._id}>
-                <div className='name-label'>
-                    {participant.name}
+                <div className='name-container'>
+                    <label className='name-label'>{participant.name}</label>
+                </div>
+                <div className='location-container'>
+                    <label className='location-label'>{participant.location}</label>
+                </div>
+                <div className='input-container'>
                     <input
+                        className='name-input'
                         placeholder='name'
                         name='name'
                         value={participant.name || ''}
                         onChange={(event) => handleInputChange(event, participant._id)}></input>
                 </div>
-                <div className='location-label'>
-                    {participant.location}
+                <div className='input-container'>
                     <input
+                        className='location-input'
                         placeholder='location'
                         name='location'
                         value={participant.location || ''}
