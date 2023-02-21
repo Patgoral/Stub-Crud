@@ -43,7 +43,7 @@ hr {
 }
 .user-attendees{
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns:2fr 2fr;
     background-color: rgb(50, 50, 50);
     padding: 25px;
     border: solid white;
@@ -54,7 +54,6 @@ hr {
 }
 .location-label{
     color: lightblue;
-    
 }
 
 #message-container {
