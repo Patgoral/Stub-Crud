@@ -33,9 +33,12 @@
     font-weight: bold;
     font-size: min(3vw, 24px);
 }
+.event-caption{
+    padding-bottom: 10px;
+}
 .button-div{
     align-self: self-start;
-    padding: 10px;
+    padding: 5px 0 10px 0;
 }
 .button-div > button{
     width: 80%;
@@ -102,7 +105,7 @@ p{
 }
 .list-container-overflow{
     background-color: rgb(65, 65, 65);
-    border-radius: 10px;
+    border-radius: 5px;
     min-height: 500px;
     max-height: 500px;
     overflow: auto;
