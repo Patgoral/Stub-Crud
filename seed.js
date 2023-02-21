@@ -11,7 +11,6 @@ const headers = {
   "Authorization": `Bearer ${token}`
 };
 
-
 async function seed() {
         await Participant.deleteMany({})
 

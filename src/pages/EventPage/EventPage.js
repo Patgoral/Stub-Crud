@@ -8,6 +8,7 @@ import YoutubeEmbed from '../components/Video/Video'
 
 export default function EventPage() {
     const navigate = useNavigate()
+    const [buttonString, setButtonString] = useState('')
     const [participants, setParticipants] = useState([])
     let participantList;
 
@@ -30,12 +31,7 @@ export default function EventPage() {
             clearInterval(countDown)
         }
     }, [day], [hour], [minute], [second])
-
-    async function handleCheckToken() {
-        checkToken()
-        navigate('/manage')
-    }
-
+    
     useEffect(function () {
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
@@ -52,6 +48,27 @@ export default function EventPage() {
             </div>
         ))
     }
+
+    async function handleCheckToken() {
+        checkToken()
+        if(participants.participants.length > 0){
+            navigate('/manage')
+        }else{
+            navigate('/events/register')
+        }
+    }
+    useEffect(function (){
+        async function participantLength(){
+        const length = await participants.participants.length;
+            if(length > 0){
+                setButtonString('Management')
+            }else{
+                setButtonString('Register')
+            }
+        }
+        participantLength()
+    })
+    
     return (
         <div className='event-page'>
             <div className='event-page-container-top'>
@@ -64,7 +81,7 @@ export default function EventPage() {
                         {day}d {hour}h {minute}m {second}s
                     </div>
                     <div className='button-div'>
-                        <button onClick={handleCheckToken}>Manage Registration</button>
+                        <button onClick={handleCheckToken}>{buttonString}</button>
                     </div>
                 </div>
             </div>
