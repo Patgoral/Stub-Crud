@@ -52,7 +52,7 @@ We utilized a third party API from Eventbrite.com.  We used real participant dat
 
 ### View the deployed page here:
 
-[View StubCrud](https://trello.com/b/ZFkGbE5Q/project-3)
+[View StubCrud](https://stubcrudclient.onrender.com/)
 
 <table>
 <tr>
