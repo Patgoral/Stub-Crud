@@ -3,8 +3,6 @@ import { getUser } from '../../utilities/users-services';
 import { useState, useEffect } from 'react'
 import * as participantsAPI from '../../utilities/participants-api'
 
-
-
 export default function ManagePage() {
     const [participants, setParticipants] = useState([])
     const [copy, setCopy] = useState([])
@@ -13,7 +11,8 @@ export default function ManagePage() {
     let participantList;
     let userListOfAttendees = [];
     const messageContainer = document.querySelector('#message-container')
-
+    
+    //READ THE PARTICIPANTS
     useEffect(function () {
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
@@ -22,7 +21,7 @@ export default function ManagePage() {
         }
         getAllParticipants()
     }, [])
-
+    //HANDLES THE DELETION
     async function handleDeleteParticipant(id) {
         await participantsAPI.removeParticipant(id)
         async function getAllParticipants() {
@@ -32,7 +31,7 @@ export default function ManagePage() {
         }
         getAllParticipants()
     }
-
+    //HANDLES EDIT/UPDATE
     async function handleEditParticipant(id, name, location) {
         const updatedParticipant = { name, location }
 
@@ -45,7 +44,7 @@ export default function ManagePage() {
         }
         getAllParticipants()
     }
-
+    //HANDLES ANY CHANGES MADE TO INPUT FIELD
     function handleInputChange(event, id) {
         const updatedParticipants = participants.participants.map(p => {
             if (p._id === id) {
@@ -55,7 +54,7 @@ export default function ManagePage() {
         })
         setParticipants({ participants: updatedParticipants })
     }
-
+    //CREATES AN ARRAY TO MAP THE PARTICIPANTS
     if (participants.length !== 0 && participants.participants !== undefined) {
         participants.participants.forEach(function (participant) {
             if (participant.owner === currentUser._id) {
@@ -63,7 +62,7 @@ export default function ManagePage() {
             }
         })
     }
-
+    //STORES A COPY OF THE PREVIOUS STATE BEFORE EDIT/UPDATE
     function getStoredValue(participantId, value) {
         copy.participants.forEach(function (person) {
             if (person._id === participantId) {
@@ -80,7 +79,7 @@ export default function ManagePage() {
             <span key={index} className='current-field-value'>{tmp.location}</span>))
         }
     }
-
+    //MAPS EVERYTHING TO INTERFACE
     participantList = userListOfAttendees.map((participant, index) => (
         <div className='user-attendees' key={index}>
             <div className='name-container'>

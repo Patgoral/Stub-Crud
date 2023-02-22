@@ -16,7 +16,7 @@ export default function EventPage() {
     const [hour, setHour] = useState(0);
     const [minute, setMinute] = useState(0);
     const [second, setSecond] = useState(0);
-
+    //COUNTDOWN TO EVENT DATE
     useEffect(() => {
         const countDown = setInterval(function () {
             let eventDate = new Date("March 25, 2023 00:00:00").getTime()
@@ -31,7 +31,7 @@ export default function EventPage() {
             clearInterval(countDown)
         }
     }, [day], [hour], [minute], [second])
-    
+    //READ PARTICIPANTS
     useEffect(function () {
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
@@ -39,7 +39,7 @@ export default function EventPage() {
         }
         getAllParticipants()
     }, [])
-
+    //SHOW A LIST OF ATTENDEES
     if (participants.length !== 0) {
         participantList = participants.participants.map((participant) => (
             <div className='list-of-attendees' key={participant._id}>
@@ -48,7 +48,7 @@ export default function EventPage() {
             </div>
         ))
     }
-
+    //SWAPS THE BUTTON NAVIGATION UPON REGISTRATION
     async function handleCheckToken() {
         checkToken()
         if(participants.participants.length > 0){
@@ -57,6 +57,7 @@ export default function EventPage() {
             navigate('/events/register')
         }
     }
+    //SWAPS THE BUTTON TEXT
     useEffect(function (){
         async function participantLength(){
         const length = await participants.participants.length;

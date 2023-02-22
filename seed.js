@@ -8,8 +8,9 @@ const url = `https://www.eventbriteapi.com/v3/events/${eventId}/attendees/`;
 const headers = {
   "Authorization": `Bearer ${token}`
 };
-
-
+//#########################################
+//COMMENT THIS BACK IN IF NEED SEEDING
+//#########################################
 // async function seed() {
 //         await Participant.deleteMany({})
 
