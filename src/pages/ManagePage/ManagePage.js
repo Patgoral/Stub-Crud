@@ -7,6 +7,8 @@ import * as participantsAPI from '../../utilities/participants-api'
 
 export default function ManagePage() {
     const [participants, setParticipants] = useState([])
+    const [copy, setCopy] = useState([])
+    let valueHolder = [];
     const currentUser = getUser()
     let participantList;
     let userListOfAttendees = [];
@@ -16,6 +18,7 @@ export default function ManagePage() {
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
             setParticipants(participants)
+            setCopy(participants)
         }
         getAllParticipants()
     }, [])
@@ -25,7 +28,7 @@ export default function ManagePage() {
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
             setParticipants(participants)
-            messageContainer.innerHTML = 'Registration Deleted'
+            messageContainer.innerHTML = 'Registrar Deleted'
         }
         getAllParticipants()
     }
@@ -37,8 +40,8 @@ export default function ManagePage() {
         async function getAllParticipants() {
             const participants = await participantsAPI.showParticipants()
             setParticipants(participants)
-            messageContainer.innerHTML = 'Registration Updated'
-
+            setCopy(participants)
+            messageContainer.innerHTML = 'Registrar Updated'
         }
         getAllParticipants()
     }
@@ -61,51 +64,66 @@ export default function ManagePage() {
         })
     }
 
-    participantList = userListOfAttendees.map((participant) => (
-        <>
-            <div className='user-attendees' key={participant._id}>
-                <div className='name-container'>
-                    <label className='name-label'>{participant.name}</label>
-                </div>
-                <div className='location-container'>
-                    <label className='location-label'>{participant.location}</label>
-                </div>
-                <div className='input-container'>
-                    <input
-                        className='name-input'
-                        placeholder='name'
-                        name='name'
-                        value={participant.name || ''}
-                        onChange={(event) => handleInputChange(event, participant._id)}></input>
-                </div>
-                <div className='input-container'>
-                    <input
-                        className='location-input'
-                        placeholder='location'
-                        name='location'
-                        value={participant.location || ''}
-                        onChange={(event) => handleInputChange(event, participant._id)}></input>
-                </div>
-                <button className='edit-button'
-                    onClick={() => handleEditParticipant(
-                        participant._id,
-                        participant.name,
-                        participant.location
-                    )}>Edit</button>
-                <button className='delete-button'
-                    onClick={() => handleDeleteParticipant(participant._id)}>
-                    Delete
-                </button>
+    function getStoredValue(participantId, value) {
+        copy.participants.forEach(function (person) {
+            if (person._id === participantId) {
+                valueHolder = [];
+                valueHolder.push(person)
+            }
+        })
+        if (value === 'name') {
+            return valueHolder.map((tmp, index) => (
+            <span key={index} className='current-field-value'>{tmp.name}</span>))
+        }
+        else if (value === 'location') {
+            return valueHolder.map((tmp, index) => (
+            <span key={index} className='current-field-value'>{tmp.location}</span>))
+        }
+    }
+
+    participantList = userListOfAttendees.map((participant, index) => (
+        <div className='user-attendees' key={index}>
+            <div className='name-container'>
+                <label className='manage-labels'><span className='current-field-desc'>Name: </span>{getStoredValue(participant._id, 'name')}</label>
             </div>
-            <hr />
-        </>
+            <div className='location-container'>
+                <label className='manage-labels'><span className='current-field-desc'>Location: </span>{getStoredValue(participant._id, 'location')}</label>
+            </div>
+            <div className='input-container'>
+                <input
+                    className='name-input'
+                    placeholder='Name'
+                    name='name'
+                    value={participant.name || ''}
+                    onChange={(event) => handleInputChange(event, participant._id)}></input>
+            </div>
+            <div className='input-container'>
+                <input
+                    className='location-input'
+                    placeholder='Location'
+                    name='location'
+                    value={participant.location || ''}
+                    onChange={(event) => handleInputChange(event, participant._id)}></input>
+            </div>
+            <div className="button-container">
+            <button className='edit-button'
+                onClick={() => handleEditParticipant(
+                    participant._id,
+                    participant.name,
+                    participant.location
+                )}>Edit</button>
+            <button className='delete-button'
+                onClick={() => handleDeleteParticipant(participant._id)}>
+                Delete
+            </button>
+            </div>
+            
+        </div>
     ))
 
     return (
-        <div className="ManagePage">
-            <h2>Manage Registration</h2>
-            <h3 id="message-container"> </h3>
-            <hr />
+        <div className="manage-page">
+            <h3 id="message-container">&nbsp;</h3>
             <div className="user-attendee-list">{participantList}</div>
         </div>
     )

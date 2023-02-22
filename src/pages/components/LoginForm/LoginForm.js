@@ -29,7 +29,7 @@ export default function LoginForm({ setUser, signUpModal }) {
     return (
         <div className='form-container' style={{display: `${signUpModal}`}}>
             <form autoComplete='off' onSubmit={handleSubmit}>
-                <label>Email</label>
+                <label className='login-labels'>Email</label>
                 <input
                     type='email'
                     name='email'
@@ -37,7 +37,7 @@ export default function LoginForm({ setUser, signUpModal }) {
                     onChange={handleChange}
                     required
                 />
-                <label>Password</label>
+                <label className='login-labels'>Password</label>
                 <input
                     type='password'
                     name='password'

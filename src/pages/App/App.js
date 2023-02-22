@@ -6,7 +6,6 @@ import AuthPage from '../AuthPage/AuthPage'
 import ManagePage from '../ManagePage/ManagePage'
 import Registration from '../Registration/Registration'
 import EventPage from '../EventPage/EventPage'
-import {Map} from '../components/Map/Map'
 
 import { getUser } from '../../utilities/users-services'
 

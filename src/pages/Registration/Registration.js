@@ -27,34 +27,34 @@ export default function Registration({ participant, setParticipant }) {
 
     return (
         <div className='wrap-div'>
-        <div className='register-page'>
-        <div className='flex-item'><Info />
-                <div className="register-form-container">
+            <div className='register-page'>
+                <div className='flex-item'><Info />
+                    <div className="register-form-container">
 
-                    <div className="register-header">Enter your Info below to Join Us!</div>
-                    <form className="register-form" onSubmit={handleAddParticipant}>
-                        <div>
-                        <input
-                            placeholder="Name"
-                            name="name"
-                            value={participant.name || ''}
-                            onChange={handleInputChange}
-                        />
-                        <input
-                            placeholder="Location"
-                            name="location"
-                            value={participant.location || ''}
-                            onChange={handleInputChange}
-                        />
-                        </div>
-                        <button className="register-button" type="submit">
-                            Register
-                        </button>
-                    </form>
+                        <div className="register-header">Enter your Info below to Join Us!</div>
+                        <form className="register-form" onSubmit={handleAddParticipant}>
+                            <div>
+                                <input
+                                    placeholder="Name"
+                                    name="name"
+                                    value={participant.name || ''}
+                                    onChange={handleInputChange}
+                                />
+                                <input
+                                    placeholder="Location"
+                                    name="location"
+                                    value={participant.location || ''}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <button className="register-button" type="submit">
+                                Register
+                            </button>
+                        </form>
+                    </div>
                 </div>
+                <div className='flex-item'><Map /></div>
             </div>
-            <div className='flex-item'><Map /></div>
-        </div>
         </div>
     )
 }
