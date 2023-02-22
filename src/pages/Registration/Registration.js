@@ -16,7 +16,7 @@ export default function Registration({ participant, setParticipant }) {
         setParticipant(participantToAdd)
         navigate('/events')
     }
-    //handles the change in the form to ADD
+    //HANDLES THE CHANGE IN INPUT
     function handleInputChange(event) {
         const addNewParticipant = {
             ...participant,

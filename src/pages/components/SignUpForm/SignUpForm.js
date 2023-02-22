@@ -55,9 +55,9 @@ export default class SignUpModal extends Component {
 
     render() {
         let signUpForm = this.state.isOpen;
-
         const disable = this.state.password !== this.state.confirm;
-
+        
+        //SWAPPING TEXT OPEN/CLOSE FUNCTIONALITY ON LOGIN PAGE
         function signInMessages(openSignUp, closeSignUp) {
             if (!signUpForm) {
                 return openSignUp
@@ -66,7 +66,7 @@ export default class SignUpModal extends Component {
                 return closeSignUp
             }
         }
-        // console.log(this.props.signUpModal)
+        
         return (
             <div className="sign-up-container">
                 <span>{signInMessages('New Here? Sign up to Register!', 'Already have an Account?')}</span>&nbsp;
