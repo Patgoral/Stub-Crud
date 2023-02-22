@@ -95,7 +95,7 @@ function SignUpForm(props) {
     return (
         <div className='form-container'>
             <form autoComplete='off' onSubmit={props.handleSubmit}>
-                <label>Name</label>
+                <label className='signup-labels'>Name</label>
                 <input
                     type='text'
                     name='name'
@@ -103,7 +103,7 @@ function SignUpForm(props) {
                     onChange={props.handleChange}
                     required
                 />
-                <label>Email</label>
+                <label className='signup-labels'>Email</label>
                 <input
                     type='email'
                     name='email'
@@ -111,7 +111,7 @@ function SignUpForm(props) {
                     onChange={props.handleChange}
                     required
                 />
-                <label>Password</label>
+                <label className='signup-labels'>Password</label>
                 <input
                     type='password'
                     name='password'
@@ -119,7 +119,7 @@ function SignUpForm(props) {
                     onChange={props.handleChange}
                     required
                 />
-                <label>Confirm</label>
+                <label className='signup-labels'>Confirm</label>
                 <input
                     type='password'
                     name='confirm'
