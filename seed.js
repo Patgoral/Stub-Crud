@@ -5,12 +5,10 @@
 // const eventId = "430916953207";
 // const url = `https://www.eventbriteapi.com/v3/events/${eventId}/attendees/`;
 
-const headers = {
-  "Authorization": `Bearer ${token}`
-};
-//#########################################
-//COMMENT THIS BACK IN IF NEED SEEDING
-//#########################################
+// const headers = {
+//   "Authorization": `Bearer ${token}`
+// };
+
 // async function seed() {
 //         await Participant.deleteMany({})
 
@@ -21,7 +19,7 @@ const headers = {
 // async function seed() {
 //         await Participant.deleteMany({})
 
-  try {
+  // try {
 
   
 //     // Fetch the attendee data from the Eventbrite API
