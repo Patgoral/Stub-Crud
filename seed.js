@@ -8,29 +8,27 @@ const url = `https://www.eventbriteapi.com/v3/events/${eventId}/attendees/`;
 const headers = {
   "Authorization": `Bearer ${token}`
 };
-//#########################################
-//COMMENT THIS BACK IN IF NEED SEEDING
-//#########################################
-// async function seed() {
-//         await Participant.deleteMany({})
 
-//   try {
+async function seed() {
+        await Participant.deleteMany({})
+
+  try {
   
-//     // Fetch the attendee data from the Eventbrite API
-//     const response = await fetch(url, { headers });
-//     const data = await response.json();
+    // Fetch the attendee data from the Eventbrite API
+    const response = await fetch(url, { headers });
+    const data = await response.json();
 
-//     const attendees = data.attendees;
+    const attendees = data.attendees;
 
-//     // Insert the attendee data into the collection
-//     const result = await Participant.insertMany(
-//       attendees.map(attendee => ({ name: attendee.profile.name, location: `${attendee.profile.addresses.home.city}, ${attendee.profile.addresses.home.region}`  }))
-//     );
-//     console.log("Eventbrite seed documents inserted into the collection");
+    // Insert the attendee data into the collection
+    const result = await Participant.insertMany(
+      attendees.map(attendee => ({ name: attendee.profile.name, location: `${attendee.profile.addresses.home.city}, ${attendee.profile.addresses.home.region}`  }))
+    );
+    console.log("Eventbrite seed documents inserted into the collection");
 
-//   } catch (err) {
-//     console.error("No API Token");
-//   } 
-// }
+  } catch (err) {
+    console.error("No API Token");
+  } 
+}
 
-// seed().catch(console.error);
+seed().catch(console.error);
