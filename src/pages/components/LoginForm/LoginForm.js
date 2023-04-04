@@ -33,7 +33,7 @@ export default function LoginForm({ setUser, signUpModal }) {
                 <input
                     type='email'
                     name='email'
-                    value={credentials.email}
+                    value='demo@demo.com'
                     onChange={handleChange}
                     required
                 />
@@ -41,7 +41,7 @@ export default function LoginForm({ setUser, signUpModal }) {
                 <input
                     type='password'
                     name='password'
-                    value={credentials.password}
+                    value='1234'
                     onChange={handleChange}
                     required
                 />

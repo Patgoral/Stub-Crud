@@ -8,7 +8,7 @@ StubCrud is a web app designed for users to register for events, as well as mana
 <img width="250px" height="250px" src='readme_img/eventpage.png'> 
 
 <img width="250px" height="250px" src='readme_img/register.png'> |
-<img width="250px" height="250px" src='readme_img/update.png'>  |
+<img width="250px" height="250px" src='readme_img/update.pngrer'>  |
 </div>
 
 ---
