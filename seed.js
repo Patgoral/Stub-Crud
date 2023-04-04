@@ -32,3 +32,8 @@ async function seed() {
 }
 
 seed().catch(console.error);
+
+
+module.exports = {
+	seed,
+}

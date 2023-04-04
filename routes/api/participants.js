@@ -11,6 +11,8 @@ router.get('/', participantsCtrl.index)
 // SHOW /api/participants/user
 router.get('/user', participantsCtrl.show)
 
+// router.post('/seed', participantsSeed.seed)
+
 
 // POST /api/participants
 router.post('/', participantsCtrl.create)
@@ -22,6 +24,7 @@ router.patch('/:id', participantsCtrl.patch)
 
 // DELETE /api/participants/:id
 router.delete('/:id', participantsCtrl.remove)
+
 
 
 
