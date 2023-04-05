@@ -46,7 +46,10 @@ export default function LoginForm({ setUser, signUpModal }) {
                     required
                 />
                 <button type='submit'>Sign In</button>
+                
             </form>
+            <p className='demo'>Hit Sign In to login as Demo user</p>
+
             <p className='error-message' >{error}</p>
         </div>
     )
