@@ -16,7 +16,7 @@ export function getToken() {
     // get the token's payload
     // check if the token has expired
     // if it hasn't return the token
-    const token = localStorage.getItem('token')
+    const token = process.env.JWT_TOKEN || localStorage.getItem('token')
     if (!token) return null
     const payload = token.split('.')[1]
     const decodedPayload = atob(payload)
