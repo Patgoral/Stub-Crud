@@ -4,8 +4,8 @@ import "./LoginForm.css"
 
 export default function LoginForm({ setUser, signUpModal }) {
     const [credentials, setCredentials] = useState({
-        email: '',
-        password: '',
+        email: 'demo@demo.com',
+        password: '1234',
     })
     const [error, setError] = useState('')
 

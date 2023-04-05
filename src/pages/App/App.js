@@ -7,6 +7,7 @@ import ManagePage from '../ManagePage/ManagePage'
 import Registration from '../Registration/Registration'
 import EventPage from '../EventPage/EventPage'
 
+
 import { getUser } from '../../utilities/users-services'
 
 function App() {
