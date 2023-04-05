@@ -19,7 +19,7 @@ export default function EventPage() {
     //COUNTDOWN TO EVENT DATE
     useEffect(() => {
         const countDown = setInterval(function () {
-            let eventDate = new Date("March 25, 2023 00:00:00").getTime()
+            let eventDate = new Date("March 23, 2024 00:00:00").getTime()
             let currentDate = new Date().getTime()
             let timeBetween = eventDate - currentDate;
             setDay(Math.floor(timeBetween / (1000 * 60 * 60 * 24)))
@@ -78,7 +78,7 @@ export default function EventPage() {
                 </div>
                 <div className='registration-container'>
                     <div className='next-event'>
-                        <div className='event-caption'>The Next Event will be <br /> March 25, 2023<br /></div>
+                        <div className='event-caption'>The Next Event will be <br /> March 23, 2024<br /></div>
                         {day}d {hour}h {minute}m {second}s
                     </div>
                     <div className='button-div'>
